@@ -1,0 +1,172 @@
+body{
+    background-color: #ece6bc;
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: #5380C2;
+    padding: 30px 80px 0px 80px;
+    min-height: 100px;
+    height: auto;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+
+.menu{
+    background-color: #5380C2;
+    font-size: larger;
+    font-family: 'Raleway', sans-serif;
+}
+
+.corpo{
+    margin: 100px 60px 60px 60px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.img_banner img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: auto;
+    max-width: 700px;
+    min-width: 200px;
+}
+
+.img_banner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 75px;
+}
+
+.legenda{
+    color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+	left: 0;
+
+    text-align: center;
+
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 1s;
+    transform: translateY(100%);
+
+}
+
+.img_banner:hover .legenda{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#quemsou h1{
+    background-color: #5380C2;
+    color: #ece6bc;
+    border-radius: 5px 15px;
+    padding: 5px 30px;
+}
+
+.conteudo{
+    padding: 25px;
+}
+
+.subconteudo{
+
+    padding: 25px;
+
+    color: #fff;
+
+    background-color: #5380C2;
+    /*rgba nos permite inserir uma quarta propriedade que controla a transarência*/
+    
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#5380C2),
+      to(#fff)
+    );
+    background-image: -webkit-linear-gradient(top, #5380C2, #fff);
+    background-image: -moz-linear-gradient(top, #5380C2, #fff);
+    background-image: -ms-linear-gradient(top, #5380C2, #fff);
+    background-image: -o-linear-gradient(top, #5380C2, #fff);
+
+    background-image: linear-gradient(to bottom, #5380C2, #fff);
+}
+
+@media screen and (min-width: 992px) {
+    .texto{
+        display: flex;
+    }
+
+    .conteudo{
+        flex: 3;
+    }
+
+    .subconteudo{
+        flex: 1;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyr{
+    float:left;
+}
+
+.contato{
+    float: right;
+}
+
+.logo{
+    width: 20px;
+}
+
+
+
+
+
+
+.grupo:before,
+.grupo:after {
+  content: "";
+  display: table;
+}
+
+.grupo:after {
+  clear: both;
+}
+
+.grupo {
+  zoom: 1;
+}
