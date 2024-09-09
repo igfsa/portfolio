@@ -1,36 +1,8 @@
-body{
-    background-color: #ece6bc;
-    font-family: 'Raleway', sans-serif;
-}
-
-a{
-    text-decoration: none;
-}
-
-footer{
-    background-color: #5380C2;
-    padding: 30px 80px 0px 80px;
-    min-height: 100px;
-    height: auto;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-    padding-right: 20px;
-}
-
-.menu{
-    background-color: #5380C2;
-    font-size: larger;
-    font-family: 'Raleway', sans-serif;
-}
-
-.corpo{
-    margin: 100px 60px 60px 60px;
-    font-family: 'Raleway', sans-serif;
+#quemsou,
+#cursos_certificados{
+    border-bottom: 0.3rem solid lightgrey;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .img_banner img{
@@ -39,38 +11,37 @@ footer a{
     margin-right: auto;
     width: 75%;
     height: auto;
-    max-width: 700px;
-    min-width: 200px;
+    max-width: 112rem;
+    min-width: 32rem;
+
+    border-radius: 0.5rem;
 }
 
 .img_banner{
+    box-sizing: border-box;
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     overflow: hidden;
-    margin: 75px;
+    margin: 7.5rem;
 }
 
-.legenda{
+.img_banner .legenda{
     color: antiquewhite;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(51, 51, 51, 0.75);
     position: absolute;
-    bottom: 0;
-	left: 0;
-
+    bottom: 0rem;
+    width: 75%;
+    left: 12.5%;
     text-align: center;
-
-    padding: 10px;
-    margin: 0px;
-    width: 100%;
-    height: auto;
-
-    opacity: 0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0rem;
+    opacity: 0rem;
     transition-property: all;
     transition-duration: 1s;
-    transform: translateY(100%);
-
+    transform: translateY(100%)
 }
 
 .img_banner:hover .legenda{
@@ -78,25 +49,17 @@ footer a{
     transform: translateY(0);
 }
 
-#quemsou h1{
-    background-color: #5380C2;
-    color: #ece6bc;
-    border-radius: 5px 15px;
-    padding: 5px 30px;
-}
-
 .conteudo{
-    padding: 25px;
+    padding: 2.5rem;
 }
 
 .subconteudo{
 
-    padding: 25px;
+    padding: 2.5rem;
 
     color: #fff;
 
     background-color: #5380C2;
-    /*rgba nos permite inserir uma quarta propriedade que controla a transarência*/
     
     background-image: -webkit-gradient(
       linear,
@@ -113,7 +76,7 @@ footer a{
     background-image: linear-gradient(to bottom, #5380C2, #fff);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 53.25rem) {
     .texto{
         display: flex;
     }
@@ -125,48 +88,50 @@ footer a{
     .subconteudo{
         flex: 1;
     }
+    
+    .img{
+        width: 62rem;
+        height: 48rem;
+
+    }
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.copyr{
-    float:left;
+#leiamais{
+    margin-top: 1.5rem;
 }
 
-.contato{
-    float: right;
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+    height: 18.75rem;
 }
 
-.logo{
-    width: 20px;
+.carrousel .legenda{
+    text-align: center;
+    color: #ece6bc;
+    background-color: lightslategray;
+    border-radius: 0.3rem;
+    padding: 1.5rem;
+    margin: 1rem;
 }
 
-
-
-
-
-
-.grupo:before,
-.grupo:after {
-  content: "";
-  display: table;
+.carrousel{
+    margin-bottom: 0rem;
 }
 
-.grupo:after {
-  clear: both;
+.certificado{
+    align-items: center;
 }
 
-.grupo {
-  zoom: 1;
+.guia{
+    display: flex;
+    justify-content: center;
+}
+
+.guia a{
+    padding: 0.4rem;
+    font-weight: bolder;
 }
