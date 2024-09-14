@@ -1,0 +1,107 @@
+$back-black: #171717;
+$text-color: #F2F2F2;
+$title-color: #36D99D;
+$btn_hover: #29A678;
+
+*{
+  font-family: 'Raleway', sans-serif;
+  background-color: $back-black;
+}
+
+html{
+  font-size: 62.5%;
+  background-color: $back-black;
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: $back-black;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  color: $text-color;
+}
+
+.menu{
+  background-color: $back-black;
+  font-size: larger;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-link:hover{
+  background-color: $btn_hover;
+}
+
+.corpo{
+  padding: 7.5rem 6rem 6rem 6rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.titulo{
+  background-color: $back-black;
+  color: $title-color;
+  border-radius: 0.5rem 1.5rem;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem;
+}
+
+.subtitulo{
+  color: $title-color;
+  padding: 0rem 1.5rem;
+}
+
+.btn{
+  font-size: 1.6rem !important;
+}
+
+.copyr{
+  float:left;
+  margin-bottom: 2rem;
+}
+
+.contato{
+  float: right;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+.contatolinha img{
+  border-radius: 3px;
+}
+
+#githublogo img{
+  background-color: $back-black;
+}
+
+@media screen and (max-width: 35rem){
+  .copyr{
+      float:none;
+  }
+
+  .contato{
+      float: none;
+  }
+}
+
+.logo{
+  width: 2rem;
+}
+
+.grupo:before,
+.grupo:after {
+  content: "";
+  display: table;
+}
+
+.grupo:after {
+  clear: both;
+}
+
+.grupo {
+  zoom: 1;
+}
+

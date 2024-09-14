@@ -1,0 +1,16 @@
+$back-black: #171717;
+$text-color: #F2F2F2;
+$title-color: #36D99D;
+
+footer{
+  background-color: $back-black;
+  padding: 3rem 8rem 0rem 8rem;
+  height: 20rem;
+  color: $text-color;
+}
+
+footer a{
+  text-decoration: none;
+  color: $text-color;
+  padding-right: 2rem;
+}
