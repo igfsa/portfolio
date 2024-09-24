@@ -1,16 +1,22 @@
-$back-black: #171717;
-$text-color: #F2F2F2;
-$title-color: #36D99D;
-
 footer{
-  background-color: $back-black;
-  padding: 3rem 8rem 0rem 8rem;
-  height: 20rem;
-  color: $text-color;
+  background-image: linear-gradient(to right, var(--back-header-sec) 0%, var(--back-header) 100%);
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 15vh;
 }
 
 footer a{
-  text-decoration: none;
-  color: $text-color;
   padding-right: 2rem;
+}
+
+.contato{
+  list-style: none;
+}
+
+.contatolinha img{
+  border-radius: 3px;
+}
+
+.contatolinha{
+  min-width: 200px;
 }

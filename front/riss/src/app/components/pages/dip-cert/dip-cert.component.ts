@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DiplomasComponent } from "../../general/diplomas/diplomas.component";
-import { CertifComponent } from "../../general/certif/certif.component";
+import { DiplomasComponent } from "../../_general/diplomas/diplomas.component";
+import { CertifComponent } from "../../_general/certif/certif.component";
 
 @Component({
   selector: 'app-dip-cert',

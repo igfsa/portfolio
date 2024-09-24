@@ -1,0 +1,42 @@
+/* Color Theme Swatches in Hex */
+$vintage-1-1-hex: #010440;
+$vintage-1-2-hex: #010326;
+$vintage-1-3-hex: #32D94B;
+$vintage-1-4-hex: #F2EFC2;
+$vintage-1-5-hex: #F2EB8C;
+
+/* Color Theme Swatches in RGBA */
+$vintage-1-1-rgba: rgba(1,4,63, 1);
+$vintage-1-2-rgba: rgba(1,2,38, 1);
+$vintage-1-3-rgba: rgba(49,216,75, 1);
+$vintage-1-4-rgba: rgba(242,239,193, 1);
+$vintage-1-5-rgba: rgba(242,235,140, 1);
+
+/* Color Theme Swatches in HSLA */
+$vintage-1-1-hsla: hsla(237, 96, 12, 1);
+$vintage-1-2-hsla: hsla(236, 94, 7, 1);
+$vintage-1-3-hsla: hsla(128, 68, 52, 1);
+$vintage-1-4-hsla: hsla(56, 64, 85, 1);
+$vintage-1-5-hsla: hsla(55, 79, 74, 1);
+
+/* Color Theme Swatches in Hex */
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-1-hex { color: #3C3C40; }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-2-hex { color: #30F2AB; }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-3-hex { color: #36D99D; }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-4-hex { color: #29A678; }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-5-hex { color: #468C73; }
+
+/* Color Theme Swatches in RGBA */
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-1-rgba { color: rgba(60, 59, 63, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-2-rgba { color: rgba(48, 242, 171, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-3-rgba { color: rgba(54, 216, 157, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-4-rgba { color: rgba(41, 165, 120, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-5-rgba { color: rgba(70, 140, 114, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-1-hsla { color: hsla(247, 3, 24, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-2-hsla { color: hsla(157, 88, 56, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-3-hsla { color: hsla(157, 68, 53, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-4-hsla { color: hsla(157, 60, 40, 1); }
+.Everybot-Cleaner---Mobile-App-&-UX-UI-Design-5-hsla { color: hsla(157, 33, 41, 1); }
+

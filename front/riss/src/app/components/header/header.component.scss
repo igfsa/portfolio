@@ -1,0 +1,41 @@
+.menu{
+  font-size: larger;
+  font-family: 'Raleway', sans-serif;
+  height: 10vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: linear-gradient(to right, var(--back-header-sec) 0%, var(--back-header) 100%);
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  color: var(--btn);
+}
+
+.ico {
+  height: 3em;
+  width: 3em;
+}
+
+.titulo{
+  color: var(--text-color);
+}
+
+.offcanvas-header {
+  background-image: linear-gradient(to right, var(--back-header-sec) 0%, var(--back-header) 100%);
+  padding: 2rem;
+}
+
+.offcanvas-body {
+  background-color: var(--back-menu);
+  padding: 0;
+}
+
+li {
+  padding: 1rem 3rem;
+  color: var(--text-color);
+  border-top: 0.1rem solid var(--back-black);
+}
+
+

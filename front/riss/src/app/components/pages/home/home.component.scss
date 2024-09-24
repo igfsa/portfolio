@@ -1,172 +1,31 @@
-$back-black: #060D0C;
-$text-color: #F2F2F2;
-$title-color: #36D99D;
-
-#quemsou,
-#cursos_certificados{
-    border-bottom: 0.3rem solid lightgrey;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-}
-
-.img_banner img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    height: auto;
-    max-width: 112rem;
-    min-width: 32rem;
-
-    border-radius: 0.5rem;
-}
-
-.img_banner{
-    box-sizing: border-box;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.img_banner .legenda{
-    color: antiquewhite;
-    background-color: rgba(51, 51, 51, 0.75);
-    position: absolute;
-    bottom: 0rem;
-    width: 75%;
-    left: 12.5%;
-    text-align: center;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin: 0rem;
-    opacity: 0rem;
-    transition-property: all;
-    transition-duration: 1s;
-    transform: translateY(100%)
-}
-
-.img_banner:hover .legenda{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.conteudo{
-    padding: 2.5rem;
-}
-
-.subconteudo{
-
-    padding: 2.5rem;
-
-    color: $text-color;
-
-    background-color: #5380C2;
-
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#5380C2),
-      to(#fff)
-    );
-    background-image: -webkit-linear-gradient(top, #5380C2, #fff);
-    background-image: -moz-linear-gradient(top, #5380C2, #fff);
-    background-image: -ms-linear-gradient(top, #5380C2, #fff);
-    background-image: -o-linear-gradient(top, #5380C2, #fff);
-
-    background-image: linear-gradient(to bottom, #5380C2, #fff);
-}
-
-@media screen and (min-width: 53.25rem) {
-    .texto{
-        display: flex;
-    }
-
-    .conteudo{
-        flex: 3;
-    }
-
-    .subconteudo{
-        flex: 1;
-    }
-
-    .img{
-        width: 62rem;
-        height: 48rem;
-
-    }
-
-}
-
-#leiamais{
-    margin-top: 1.5rem;
-}
-
-.img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25rem;
-    height: 18.75rem;
-}
-
-.carrousel .legenda{
-    text-align: center;
-    color: #ece6bc;
-    background-color: lightslategray;
-    border-radius: 0.3rem;
-    padding: 1.5rem;
-    margin: 1rem;
-}
-
-.carrousel{
-    margin-bottom: 0rem;
-}
-
-.certificado{
-    align-items: center;
-}
-
-.guia{
-    display: flex;
-    justify-content: center;
-}
-
-.guia a{
-    padding: 0.4rem;
-    font-weight: bolder;
-}
-
-
 // scroll gsap
 
-.scrollOpen {
-  color: $text-color;
-  height: 20rem;
-  display: flex;
-  flex-wrap: no-wrap;
-}
-
-.panel {
-  align-content: center;
-  justify-content: center;
-  size: 100vh;
-}
-
-section {
-  size: 100vh;
-}
-
-body {
+app-home {
   overscroll-behavior: none;
   height: 100vh;
 }
+
 .container {
+  max-width: 600%;
+  max-height: 100%;
+  margin: 0;
+}
+
+.container-home {
   overscroll-behavior: none;
   width: 600%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
 }
+
+.panel {
+  height: 90vh;
+  width: 100vw;
+  margin: 10vh 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

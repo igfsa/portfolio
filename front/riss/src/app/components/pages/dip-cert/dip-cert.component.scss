@@ -6,7 +6,8 @@ ngb-carousel img{
   width: 75%;
   max-width: 112rem;
   min-width: 32rem;
-  border-radius: 0.5rem;}
+  border-radius: 0.5rem;
+}
 
 .leg{
   color: antiquewhite;
@@ -29,4 +30,21 @@ ngb-carousel{
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.carrousel .legenda{
+  text-align: center;
+  color: #ece6bc;
+  background-color: lightslategray;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.carrousel{
+  margin-bottom: 0rem;
+}
+
+.certificado{
+  align-items: center;
 }

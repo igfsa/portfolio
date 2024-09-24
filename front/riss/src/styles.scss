@@ -3,3 +3,65 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+:root{
+  --back-black: #171717;
+  --text-color: #F2F2F2;
+  --title-color: #36D99D;
+  --btn: #29A678;
+  --btn-hover: #468C73;
+
+  --back-header: #0D0D0D;
+  --back-header-sec: #012623;
+
+  --back-menu : #3C3C40;
+}
+
+*{
+  font-family: 'Raleway', sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+  background-color: var(--back-black);
+  color: var(--text-color);
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: var(--back-black);
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  color: var(--title-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+p{
+  color: var(--text-color);
+}
+
+.container {
+  margin: 10vh 0 15vh;
+  padding:  5%;
+}
+
+.btn{
+  font-size: 1.6rem !important;
+  background-color: var(--btn);
+  color: var(--text-color);
+}
+
+.btn:hover{
+  background-color: var(--btn-hover);
+}
