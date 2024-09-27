@@ -15,8 +15,6 @@ app-home {
   overscroll-behavior: none;
   width: 600%;
   height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
 }
 
 .panel {
@@ -28,4 +26,56 @@ app-home {
   justify-content: center;
 }
 
+.main-sub{
+  height: 80vh;
+  width: 40vw;
+}
 
+.main-sub:first-child{
+  padding-right: 2.5%;
+}
+
+.main-sub:last-child{
+  padding-left: 2.5%;
+}
+
+.vr {
+  height: 50vh;
+  width: 0.3em;
+  border-radius: 2em;
+}
+
+#bg-chuva{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  clip-path: fill-box;
+}
+
+#main{
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(transparent 0%, var(--back-black) 80%);
+}
+
+#Camada_1 {
+  color: var(--back-menu);
+
+  transition-property: color;
+  transition-duration: 500ms;
+}
+
+#Camada_1:hover{
+  color: var(--home-icon);
+}
+
+#finger {
+  width: 2em;
+  height: auto;
+  bottom: 35%;
+  right: 20%;
+  color: var(--text-color);
+  opacity: 0.6;
+  animation: move-finger 1s ease-in infinite alternate forwards;
+  rotate: -30deg;
+}

@@ -14,10 +14,62 @@
   --back-header-sec: #012623;
 
   --back-menu : #3C3C40;
+
+  --rain: #50F296;
+
+  --home-icon: #17A671;
+
+  @keyframes animate-rain {
+    0%{
+      transform: translateY(-20vh);
+    }
+    100%{
+      transform: translateY(calc(80vh + 20vh));
+    }
+  }
+
+  @keyframes expand-collapse {
+    0%{
+      transform: scale(0.95);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @keyframes move-finger {
+    0%{
+      transform: translateY(0);
+    }
+    100%{
+      transform: translateY(10vh);
+    }
+  }
+
+  @font-face {
+    font-family: 'CaskaydiaCoveNerdFontMono-Regular';
+    src: url("./assets/fonts/CaskadiaCoveNerdFontMono/CaskaydiaCoveNerdFontMono-Regular.ttf") format('truetype');
+  }
+
+  @font-face {
+    font-family: 'CaskaydiaCoveNerdFontMono-Light';
+    src: url("./assets/fonts/CaskadiaCoveNerdFontMono/CaskaydiaCoveNerdFontMono-Light.ttf") format('truetype');
+  }
+
+  @font-face {
+    font-family: 'CaskaydiaCoveNerdFontMono-Bold';
+    src: url("./assets/fonts/CaskadiaCoveNerdFontMono/CaskaydiaCoveNerdFontMono-Bold.ttf") format('truetype');
+  }
+
+  @font-face {
+    font-family: 'CaskaydiaCoveNerdFontMono-Italic';
+    src: url("./assets/fonts/CaskadiaCoveNerdFontMono/CaskaydiaCoveNerdFontMono-Italic.ttf") format('truetype');
+  }
+
 }
 
 *{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'CaskaydiaCoveNerdFontMono-Regular', monospace;
 }
 
 html{
