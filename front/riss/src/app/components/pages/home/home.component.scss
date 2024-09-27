@@ -31,18 +31,23 @@ app-home {
   width: 40vw;
 }
 
-.main-sub:first-child{
-  padding-right: 2.5%;
-}
-
-.main-sub:last-child{
-  padding-left: 2.5%;
-}
-
 .vr {
   height: 50vh;
-  width: 0.3em;
+  width: 0.3%;
   border-radius: 2em;
+  padding: 0;
+  margin: 0 2.5%;
+}
+
+.icons-home{
+  align-items: center;
+  align-content: center;
+  color: var(--gray);
+}
+
+.icon-section{
+  transition-property: color;
+  transition-duration: 500ms;
 }
 
 #bg-chuva{
@@ -65,17 +70,28 @@ app-home {
   transition-duration: 500ms;
 }
 
+.icon-section:hover,
 #Camada_1:hover{
   color: var(--home-icon);
 }
 
 #finger {
-  width: 2em;
+  width: 2vw;
   height: auto;
   bottom: 35%;
   right: 20%;
-  color: var(--text-color);
+  color: var(--text-color-light);
   opacity: 0.6;
   animation: move-finger 1s ease-in infinite alternate forwards;
   rotate: -30deg;
+}
+
+#list-main li{
+  background: none;
+  color: var(--text-color);
+}
+
+#quem-sou-home {
+  height: 80vh;
+  width: 80vw;
 }

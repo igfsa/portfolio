@@ -5,10 +5,12 @@
 
 :root{
   --back-black: #171717;
-  --text-color: #F2F2F2;
+  --text-color-light: #F2F2F2;
+  --text-color: #C5C5C5;
   --title-color: #36D99D;
   --btn: #29A678;
   --btn-hover: #468C73;
+  --gray: #4D4D4D;
 
   --back-header: #0D0D0D;
   --back-header-sec: #012623;
@@ -75,14 +77,14 @@
 html{
   font-size: 62.5%;
   background-color: var(--back-black);
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 body{
   font-size: 1.6rem;
   background-color: var(--back-black);
   font-family: 'Raleway', sans-serif;
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 h1,
@@ -96,11 +98,11 @@ h6{
 
 a{
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 p{
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 .container {
@@ -111,7 +113,7 @@ p{
 .btn{
   font-size: 1.6rem !important;
   background-color: var(--btn);
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 .btn:hover{
