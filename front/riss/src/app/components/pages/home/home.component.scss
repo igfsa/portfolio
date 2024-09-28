@@ -24,11 +24,31 @@ app-home {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
+  clip-path: fill-box;
+  position: relative;
+
 }
 
 .main-sub{
   height: 80vh;
   width: 40vw;
+}
+
+
+.bg-sub{
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(transparent 0%, var(--back-black) 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub {
+  height: 80vh;
+  width: 80vw;
 }
 
 .vr {
@@ -48,19 +68,6 @@ app-home {
 .icon-section{
   transition-property: color;
   transition-duration: 500ms;
-}
-
-#bg-chuva{
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  clip-path: fill-box;
-}
-
-#main{
-  width: 100vw;
-  height: 100vh;
-  background-image: radial-gradient(transparent 0%, var(--back-black) 80%);
 }
 
 #Camada_1 {
@@ -91,7 +98,3 @@ app-home {
   color: var(--text-color);
 }
 
-#quem-sou-home {
-  height: 80vh;
-  width: 80vw;
-}

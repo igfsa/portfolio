@@ -21,12 +21,21 @@
 
   --home-icon: #17A671;
 
-  @keyframes animate-rain {
+  @keyframes animate-Y {
     0%{
-      transform: translateY(-20vh);
+      transform: translateY(-50vh);
     }
     100%{
-      transform: translateY(calc(80vh + 20vh));
+      transform: translateY(calc(50vh));
+    }
+  }
+
+  @keyframes animate-X {
+    0%{
+      transform: translateY(-50vw);
+    }
+    100%{
+      transform: translateY(calc(50vw));
     }
   }
 
