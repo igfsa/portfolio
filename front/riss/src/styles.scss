@@ -57,6 +57,25 @@
     }
   }
 
+  @keyframes fireworkX {
+    0%{
+      transform: translateX(var(--posX))
+    }
+    100%{
+      transform: translateX(var(--runX))
+    }
+  }
+
+  @keyframes fireworkY {
+    0%{
+      transform: translateY(var(--posY))
+    }
+    100%{
+      transform: translateY(var(--runY))
+    }
+  }
+
+
   @font-face {
     font-family: 'CaskaydiaCoveNerdFontMono-Regular';
     src: url("./assets/fonts/CaskadiaCoveNerdFontMono/CaskaydiaCoveNerdFontMono-Regular.ttf") format('truetype');
@@ -127,4 +146,18 @@ p{
 
 .btn:hover{
   background-color: var(--btn-hover);
+}
+
+.firework::before {
+  content: "";
+  background-color: var(--rain);
+  width: var(--width);
+  height: var(--height);
+  border-radius: 50%;
+
+  animation: fireworkY 2.5s 1 ease-in;
+  position: absolute;
+  display: flex;
+  animation-duration: var(--duration);
+  animation-delay: var(--delay);
 }
