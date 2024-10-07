@@ -2,12 +2,14 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 :root{
   --back-black: #171717;
   --text-color-light: #F2F2F2;
   --text-color: #C5C5C5;
-  --title-color: #36D99D;
+  --title-color: #17A671;
   --btn: #29A678;
   --btn-hover: #468C73;
   --gray: #4D4D4D;
@@ -86,14 +88,14 @@
 html{
   font-size: 62.5%;
   background-color: var(--back-black);
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 body{
   font-size: 1.6rem;
   background-color: var(--back-black);
   font-family: 'Raleway', sans-serif;
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 h1,
@@ -111,12 +113,14 @@ a{
 }
 
 p{
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 .container {
-  margin: 10vh 0 15vh;
+  margin: 10vh auto 15vh;
   padding:  5%;
+  display: block;
+  justify-self: center;
 }
 
 .btn{

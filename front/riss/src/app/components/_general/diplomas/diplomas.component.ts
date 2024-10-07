@@ -1,10 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, importProvidersFrom, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { ImageModule } from 'primeng/image';
 
 @Component({
   selector: 'app-diplomas',
   standalone: true,
-  imports: [NgbCarouselModule],
+  imports: [NgbCarouselModule, ImageModule, CommonModule ],
   templateUrl: './diplomas.component.html',
   styleUrls: ['./diplomas.component.scss', '../../../app.component.scss', '../../pages/dip-cert/dip-cert.component.scss']
 })
@@ -53,7 +55,4 @@ export class DiplomasComponent {
       this.togglePaused();
     }
   }
-
-
-
 }

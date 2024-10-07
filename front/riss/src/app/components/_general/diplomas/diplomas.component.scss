@@ -1,0 +1,32 @@
+ngb-carousel{
+  width: 75vh;
+  height: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ngb-carousel h3{
+  justify-self: end;
+  font-size: small;
+  padding-left: 10%;
+  padding-right: 30%;
+}
+
+.carousel-caption {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to right, var(--back-menu) 0%, transparent 100%);
+}
+
+.p-component-overlay {
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  z-index: +2;
+}
+

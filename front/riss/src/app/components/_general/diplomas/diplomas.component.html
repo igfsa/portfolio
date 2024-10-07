@@ -4,17 +4,24 @@
 [pauseOnHover]="pauseOnHover"
 [pauseOnFocus]="pauseOnFocus"
 (slide)="onSlide($event)"
+
+class = "d-flex"
 >
 
 
 @for (item of img; track item; let i = $index) {
 
-  <ng-template ngbSlide>
-    <div class="carousel-caption leg">
-      <h3>{{desc[$index]}}</h3>
+  <ng-template ngbSlide class = "d-flex align-items-stretch mh-100">
+    <div class="carousel-caption d-flex align-items-center" style="left: unset;">
+      <h3 class = "text-start">{{desc[$index]}}</h3>
     </div>
-    <div class="picsum-img-wrapper">
-      <img [src]="item" alt="{{desc[$index]}}" />
+    <div class="picsum-img-wrapper object-fit-fill rounded ">
+      <p-image
+        [src]="item"
+        alt="{{desc[$index]}}"
+        height = "auto"
+        width = "70%"
+        [preview]="true" />
     </div>
   </ng-template>
 }
