@@ -1,5 +1,5 @@
-import { Element } from '@angular/compiler';
-import { AfterViewInit, Component, EventEmitter, Output } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss', '../../../app.component.scss'],
 })
@@ -15,6 +15,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export class HomeComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
+    if (!ScrollTrigger.getAll())
+    {
+      console.log(ScrollTrigger.getAll().length)
+      ScrollTrigger.refresh();
+
+    }
+
+    ScrollTrigger.enable();
+
     this.rain();
     this.techno();
     this.barRoll();
@@ -35,6 +44,11 @@ export class HomeComponent implements AfterViewInit{
         end: "+=3500",
       }
     });
+
+  }
+
+  ngOnDestroy(){
+    ScrollTrigger.disable();
   }
 
   rain(): void{

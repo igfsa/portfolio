@@ -1,1 +1,68 @@
+@keyframes saber {
+  0%{
+    height: 0;
+  }
+  20%{
+    height: 15vh;
+  }
+  60%{
+    height: 15vh;
+  }
+  80%{
+    height: 0;
+  }
+  100%{
+    height: 0;
+  }
+}
+
+#movies {
+  display: flex;
+  align-items: start;
+  height: 20vh;
+}
+
+.light {
+  content: "";
+  animation: saber 5s normal infinite;
+  width: 1vh;
+  height: 10px;
+  display: flex;
+  border-radius: 1vh 1vh 0 0;
+}
+
+.inner-light {
+  content: "";
+  animation: saber 5s normal infinite;
+  background-color: var(--text-color);
+  width: 0.4vh;
+  height: 10px;
+  max-height: 95%;
+  display: flex;
+  margin: auto;
+  border-radius: 1vh 1vh 0 0;
+}
+
+
+.lightsaber{
+  z-index: +1;
+  width: auto;
+  height: 5vh;
+}
+
+#lightsaber-box-1{
+  z-index: +1;
+  width: auto;
+  height: 20vh;
+  rotate: 15deg;
+}
+
+#lightsaber-box-2{
+  z-index: +1;
+  width: auto;
+  height: 20vh;
+  rotate: -15deg;
+}
+
+
 

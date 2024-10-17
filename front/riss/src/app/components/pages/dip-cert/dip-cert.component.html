@@ -3,9 +3,88 @@
   <h2 class="subtitulo">Abaixo, os cursos e certificados conquistados ao longo do período</h2>
 
   <div>
-    <app-diplomas></app-diplomas>
+
+    <div>
+
+      @for (item of img_dip; track item; let i = $index) {
+        @if (i%2!=0){
+          <div class = "item-line-rev mh-100" >
+            <div class="leg-rev d-flex align-items-center ">
+              <h3>{{descr_dip[$index]}}</h3>
+            </div>
+            <div class="img-container align-self-stretch">
+              <p-image
+                [src]="item"
+                alt="{{descr_dip[$index]}}"
+                [preview]="true"
+                class = "object-fit-cover rounded "
+                imageClass="imgPrev"
+                >
+              </p-image>
+            </div>
+          </div>
+        } @else {
+          <div class = "item-line mh-100" >
+            <div class="leg d-flex align-items-center ">
+              <h3>{{descr_dip[$index]}}</h3>
+            </div>
+            <div class="img-container align-self-stretch">
+              <p-image
+                [src]="item"
+                alt="{{descr_dip[$index]}}"
+                [preview]="true"
+                class = "object-fit-cover rounded "
+                imageClass="imgPrev"
+                >
+              </p-image>
+            </div>
+          </div>
+        }
+      }
+    </div>
+
+    <div>
+
+      @for (item of img_cert; track item; let i = $index) {
+        @if (i%2!=0){
+          <div class = "item-line-rev mw-100" >
+            <div class="leg-rev d-flex align-items-center ">
+              <h3>{{descr_cert[$index]}}</h3>
+            </div>
+            <div class="img-container align-self-stretch">
+              <p-image
+                [src]="item"
+                alt="{{descr_cert[$index]}}"
+                [preview]="true"
+                class = ""
+                imageClass="imgPrev"
+                >
+              </p-image>
+            </div>
+          </div>
+        } @else {
+          <div class = "item-line mw-100">
+            <div class="leg d-flex align-items-center ">
+              <h3>{{descr_cert[$index]}}</h3>
+            </div>
+            <div class="img-container align-self-stretch">
+              <p-image
+                [src]="item"
+                alt="{{descr_cert[$index]}}"
+                [preview]="true"
+                class = ""
+                imageClass="imgPrev"
+                >
+              </p-image>
+            </div>
+          </div>
+        }
+      }
+    </div>
   </div>
-  <div>
-    <app-certif></app-certif>
-  </div>
+
+  <p>
+    Em breve novos cursos.
+  </p>
+
 </div>
