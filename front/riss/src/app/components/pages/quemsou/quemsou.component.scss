@@ -16,9 +16,194 @@
   }
 }
 
-#movies {
+@keyframes piece-1 {
+  0%{
+    left: 10%;
+    bottom: 25%;
+    transform: rotate(154deg);
+  }
+
+  7%{
+    left: 10%;
+    bottom: 25%;
+    transform: rotate(154deg);
+  }
+
+  18%{
+    left: 45%;
+    bottom: 45%;
+    transform: rotate(540deg);
+  }
+
+  50%{
+    left: 45%;
+    bottom: 45%;
+    transform: rotate(540deg);
+
+  }
+
+  71%{
+    left: 10%;
+    bottom: 25%;
+    transform: rotate(154deg);
+  }
+
+  100%{
+    left: 10%;
+    bottom: 25%;
+    transform: rotate(154deg);
+  }
+}
+
+@keyframes piece-2 {
+  0%{
+    right: 14%;
+    bottom: 37%;
+    transform: rotate(237deg);
+  }
+
+  15%{
+    right: 14%;
+    bottom: 37%;
+    transform: rotate(237deg);
+  }
+
+  26%{
+    right: 50%;
+    bottom: 50%;
+    transform: rotate(540deg);
+  }
+
+  60%{
+    right: 50%;
+    bottom: 50%;
+    transform: rotate(540deg);
+  }
+
+  71%{
+    right: 14%;
+    bottom: 37%;
+    transform: rotate(237deg);
+  }
+
+  100%{
+    right: 14%;
+    bottom: 37%;
+    transform: rotate(237deg);
+  }
+}
+
+@keyframes piece-3 {
+  0%{
+    left: 8%;
+    top: 15%;
+    transform: rotate(83deg);
+  }
+
+  23%{
+    left: 8%;
+    top: 15%;
+    transform: rotate(83deg);
+  }
+
+  34%{
+    left: 45%;
+    top: 50%;
+    transform: rotate(540deg);
+  }
+
+  70%{
+    left: 45%;
+    top: 50%;
+    transform: rotate(540deg);
+  }
+
+  82%{
+    left: 8%;
+    top: 15%;
+    transform: rotate(83deg);
+  }
+
+  100%{
+    left: 8%;
+    top: 15%;
+    transform: rotate(83deg);
+  }
+}
+
+@keyframes piece-4 {
+  0%{
+    right: 13%;
+    top: 30%;
+    transform: rotate(170deg);
+  }
+
+  30%{
+    right: 13%;
+    top: 30%;
+    transform: rotate(170deg);
+  }
+
+  46%{
+    right: 50%;
+    top: 46%;
+    transform: rotate(540deg);
+  }
+
+  82%{
+    right: 50%;
+    top: 46%;
+    transform: rotate(540deg);
+  }
+
+  93%{
+    right: 13%;
+    top: 30%;
+    transform: rotate(170deg);
+  }
+
+  100%{
+    right: 13%;
+    top: 30%;
+    transform: rotate(170deg);
+  }
+}
+
+.container{
+  max-width: 1024px;
+}
+
+.section {
   display: flex;
   align-items: start;
+  height: 20vh;
+  width: 100%;
+  margin: 5% 0;
+}
+
+.section-drawn{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-text{
+  width: 80%;
+  height: 100%;
+}
+
+.vr {
+  height: 100%;
+  width: 0.3%;
+  border-radius: 2em;
+  padding: 0;
+  margin: 0 2.5%;
+}
+
+.lightsaber-box{
+  z-index: +1;
+  width: auto;
   height: 20vh;
 }
 
@@ -26,7 +211,6 @@
   content: "";
   animation: saber 5s normal infinite;
   width: 1vh;
-  height: 10px;
   display: flex;
   border-radius: 1vh 1vh 0 0;
 }
@@ -36,7 +220,6 @@
   animation: saber 5s normal infinite;
   background-color: var(--text-color);
   width: 0.4vh;
-  height: 10px;
   max-height: 95%;
   display: flex;
   margin: auto;
@@ -50,19 +233,78 @@
   height: 5vh;
 }
 
+.piece{
+  position: relative;
+  width: 20% * calc(72/94);
+  aspect-ratio: 1/1;
+}
+
+#movies {
+
+}
+
 #lightsaber-box-1{
-  z-index: +1;
-  width: auto;
-  height: 20vh;
   rotate: 15deg;
 }
 
 #lightsaber-box-2{
-  z-index: +1;
-  width: auto;
-  height: 20vh;
   rotate: -15deg;
 }
 
+#hobbies{
+  float: right;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
 
+#hobbies-drawn{
+  position: relative;
+}
+
+
+#piece-1{
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1/1;
+  fill: #C50059;
+  left: 0;
+  bottom: 0;
+  animation: piece-1 10s alternate infinite;
+}
+
+#piece-2{
+  position: absolute;
+  width: 20% * calc(72/94);
+  aspect-ratio: 1/1;
+  fill: #3868A6;
+  right: 0;
+  bottom: 0;
+  animation: piece-2 10s alternate infinite;
+}
+
+#piece-3{
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 94/72;
+  fill: #025959;
+  left: 0;
+  top: 0;
+  animation: piece-3 10s alternate infinite;
+}
+
+#piece-4{
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 72/94;
+  fill: #F2EB8C;
+  right: 0;
+  top: 0;
+  animation: piece-4 10s alternate infinite;
+}
+
+#corvo-gif{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
 
