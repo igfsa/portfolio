@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet, Router, NavigationEnd } from '@angular/router';
 
 import { DiplomasComponent } from "./components/_general/diplomas/diplomas.component";
@@ -32,11 +32,12 @@ import * as AOS from "aos"
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent{
+export class AppComponent implements OnInit{
   title = 'riss';
 
   ngOnInit(){
     AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
 
   showFooter: boolean = true;
