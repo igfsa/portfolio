@@ -217,10 +217,6 @@
   width: 80%;
 }
 
-.skills-div{
-  display: flex;
-}
-
 @media (max-width: 768px) {
   .skills-div{
     display: block;
@@ -229,17 +225,27 @@
   #hardskills,
   #softskills{
     width: 100%;
-    max-width: 100%;
-    padding: 2vh;
-    text-align: center;
+    border-top: 2px var(--gray) ridge;
+    align-content: center;
+  }
 }
 
+@media (min-width: 769px) {
+  .skills-div{
+    display: flex;
+  }
+
+  #hardskills,
+  #softskills{
+    width: 50%;
+    align-content: center;
+  }
 }
 
 .skill-box{
-  margin: 5vh 0;
   height: 30vh;
   width: 100%;
+  padding: 2vh 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 25%);
   box-sizing: content-box;
@@ -257,8 +263,11 @@
 .bar{
   background-image: linear-gradient(to top, var(--rain) 0%, var(--btn-hover) 100%);
   width: 5vh;
-  animation: bar-graph 1s ease-in 2s 1 normal forwards;
   align-self: center;
+}
+
+.animate-bar{
+  animation: bar-graph 1s ease-in 0.5s 1 normal forwards;
 }
 
 .leg{
@@ -352,14 +361,8 @@
   width: 100%;
 }
 
+#softskills,
 #hardskills{
-  width: 50%;
-  padding: 2vh;
-  text-align: center;
-}
-
-#softskills{
-  width: 50%;
   padding: 2vh;
   text-align: center;
 }

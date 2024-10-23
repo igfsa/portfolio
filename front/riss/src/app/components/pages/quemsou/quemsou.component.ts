@@ -2,10 +2,14 @@ import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { ViewportAnimationBarDirective } from '../../../directive/viewportAnimation/viewport-animation-bar.directive';
+
+import { viewport } from '@popperjs/core';
+
 @Component({
   selector: 'app-quemsou',
   standalone: true,
-  imports: [CommonModule, NgbCollapseModule],
+  imports: [CommonModule, NgbCollapseModule, ViewportAnimationBarDirective],
   templateUrl: './quemsou.component.html',
   styleUrl: './quemsou.component.scss'
 })
