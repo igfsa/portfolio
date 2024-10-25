@@ -1,18 +1,22 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, inject, TemplateRef } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { ModalDismissReasons, NgbModal, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, RouterOutlet],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet, NgbTooltipModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss', '../../../app.component.scss'],
 })
 
 export class HomeComponent implements AfterViewInit{
+
+	private modalService = inject(NgbModal);
+	closeResult = '';
 
   ngAfterViewInit(): void {
     if (!ScrollTrigger.getAll())
@@ -50,6 +54,28 @@ export class HomeComponent implements AfterViewInit{
   ngOnDestroy(){
     ScrollTrigger.disable();
   }
+
+	open(content: TemplateRef<any>) {
+		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', centered: true }).result.then(
+			(result) => {
+				this.closeResult = `Closed with: ${result}`;
+			},
+			(reason) => {
+				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+			},
+		);
+	}
+
+	private getDismissReason(reason: any): string {
+		switch (reason) {
+			case ModalDismissReasons.ESC:
+				return 'by pressing ESC';
+			case ModalDismissReasons.BACKDROP_CLICK:
+				return 'by clicking on a backdrop';
+			default:
+				return `with: ${reason}`;
+		}
+	}
 
   rain(): void{
     let amount = 100;

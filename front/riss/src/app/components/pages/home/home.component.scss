@@ -24,11 +24,9 @@ app-home {
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
   clip-path: fill-box;
   position: relative;
-
 }
 
 .main-sub{
@@ -89,6 +87,11 @@ app-home {
   background-color: transparent !important;
 }
 
+#home-button{
+  background-color: transparent;
+  border: none;
+}
+
 #finger {
   width: 2vw;
   height: auto;
@@ -105,3 +108,20 @@ app-home {
   color: var(--text-color);
 }
 
+.modal-header{
+  background-color: var(--back-black);
+  border-bottom: 1px solid var(--gray);
+}
+
+.modal-body{
+  background-color: #1f1f1f;
+}
+
+.modal-footer{
+  background-color: var(--back-black);
+  border-top: 1px solid var(--gray);
+}
+
+.modal-title{
+
+}
