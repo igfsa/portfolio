@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CertifComponent } from "../../_general/certif/certif.component";
 import { ImageModule } from 'primeng/image';
 
 @Component({
   selector: 'app-dip-cert',
   standalone: true,
-  imports: [ CertifComponent, ImageModule],
+  imports: [ ImageModule ],
   templateUrl: './dip-cert.component.html',
   styleUrl: './dip-cert.component.scss'
 })

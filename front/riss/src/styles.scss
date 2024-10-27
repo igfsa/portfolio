@@ -94,7 +94,7 @@ html{
 }
 
 body{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   background-color: var(--back-black);
   font-family: 'Raleway', sans-serif;
   color: var(--text-color-light);
@@ -112,6 +112,10 @@ h6{
 a{
   text-decoration: none;
   color: var(--text-color-light);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 p{
@@ -151,3 +155,6 @@ p-image span{
   border-radius: 5px;
 }
 
+.tooltip .tooltip-inner {
+  font-size: 200%;
+}

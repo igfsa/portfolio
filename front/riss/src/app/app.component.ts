@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet, Router, NavigationEnd } from '@angular/router';
 
-import { DiplomasComponent } from "./components/_general/diplomas/diplomas.component";
-import { CertifComponent } from "./components/_general/certif/certif.component";
 import { DipCertComponent } from './components/pages/dip-cert/dip-cert.component';
 import { ProjetosComponent } from './components/pages/projetos/projetos.component';
 import { HeaderComponent } from "./components/header/header.component";
@@ -19,8 +17,6 @@ import * as AOS from "aos"
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    DiplomasComponent,
-    CertifComponent,
     DipCertComponent,
     HeaderComponent,
     HomeComponent,

@@ -51,6 +51,12 @@
   padding-left: 30%;
 }
 
+.img-container {
+  max-width: max-content;
+  height: 100%;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
 
   .item-line-rev,
