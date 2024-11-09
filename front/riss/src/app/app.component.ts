@@ -8,7 +8,8 @@ import { HomeComponent } from "./components/pages/home/home.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { QuemsouComponent } from './components/pages/quemsou/quemsou.component';
 
-import * as AOS from "aos"
+import { routes } from './app.routes';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import * as AOS from "aos"
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+
     DipCertComponent,
     HeaderComponent,
     HomeComponent,
@@ -30,21 +32,35 @@ import * as AOS from "aos"
 
 export class AppComponent implements OnInit{
   title = 'riss';
-
-  ngOnInit(){
-    AOS.init();
-    window.addEventListener('load', AOS.refresh);
-  }
-
   showFooter: boolean = true;
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
+        // Custom scroll restoration for each navigation
+        window.scrollTo(0, 0);
+
         // Check if the current route is the home page
         this.showFooter = event.url !== '/'; // Hide footer on home page ('/')
+
       }
     });
   }
+
+  ngOnInit(){
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        setTimeout(() => {
+          AOS.refresh()
+      }, 500)
+      }
+    });
+
+    this.router.resetConfig(routes);
+  }
+
 
 }

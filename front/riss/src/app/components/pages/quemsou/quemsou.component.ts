@@ -5,6 +5,7 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewportAnimationBarDirective } from '../../../directive/viewportAnimation/viewport-animation-bar.directive';
 
 import { viewport } from '@popperjs/core';
+import * as AOS from "aos"
 
 @Component({
   selector: 'app-quemsou',
@@ -30,6 +31,7 @@ export class QuemsouComponent implements AfterViewInit{
     this.box2.nativeElement.addEventListener('animationiteration', () => {
       this.changeColor2();
     });
+
   }
 
   changeColor1() {
