@@ -470,11 +470,13 @@
   background-color: #1f1f1f;
   border-block: 2px var(--gray) ridge;
   padding-top: 5%;
+  margin-bottom: 5%;
 }
 
 #skills-title{
   text-align: center;
   width: 100%;
+  margin: 5% 0;
 }
 
 #softskills,
@@ -538,6 +540,7 @@
 
 #ovo-button{
   width: 5vw;
+  max-height: 200%;
   aspect-ratio: 1.45;
   position: relative;
   animation: grow-egg 2s reverse forwards ease-in-out;
@@ -546,7 +549,7 @@
 }
 
 #ovo-button:hover{
-  scale: 3;
+  scale: 2;
   opacity: 1;
 }
 
@@ -581,6 +584,12 @@
 
 #curiosity{
 
+}
+
+#curiosity-title{
+  text-align: center;
+  width: 100%;
+  margin: 5% 0;
 }
 
 #movies {
