@@ -19,6 +19,8 @@ export class HomeComponent implements AfterViewInit{
 	closeResult = '';
 
   ngAfterViewInit(): void {
+    // functions to start and/or refresh gsap ScrollTrigger
+    // without it, the scroll position when leaving and reentering the page is sent to other value than the begin
     if (!ScrollTrigger.getAll())
     {
       console.log(ScrollTrigger.getAll().length)
@@ -28,10 +30,13 @@ export class HomeComponent implements AfterViewInit{
 
     ScrollTrigger.enable();
 
+
+    // background effects function
     this.rain();
     this.techno();
     this.barRoll();
 
+    // gsap enable and configuration for horizontal scrolling
     gsap.registerPlugin(ScrollTrigger);
 
     let sections = gsap.utils.toArray(".panel");
@@ -52,6 +57,8 @@ export class HomeComponent implements AfterViewInit{
   }
 
   ngOnDestroy(){
+    // functions to stop gsap ScrollTrigger when leaving page
+    // without it, the scroll behavior when changing components still the same as this page
     ScrollTrigger.disable();
   }
 

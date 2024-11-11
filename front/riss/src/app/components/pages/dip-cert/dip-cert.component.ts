@@ -10,6 +10,7 @@ import { ImageModule } from 'primeng/image';
 })
 export class DipCertComponent {
 
+  // used in the html component in the for loops to auto create elements over the string iteration
 
   img_dip: string[] =
   [

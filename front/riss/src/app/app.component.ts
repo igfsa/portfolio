@@ -18,7 +18,6 @@ import * as AOS from 'aos'
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-
     DipCertComponent,
     HeaderComponent,
     HomeComponent,
@@ -48,9 +47,12 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
+    // Animate on Scroll init
     AOS.init();
     window.addEventListener('load', AOS.refresh);
 
+    // Restarting AOS on each navigation change with a delay
+    // Avoid AOS rendering elements on page leave instead of page enter
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         setTimeout(() => {

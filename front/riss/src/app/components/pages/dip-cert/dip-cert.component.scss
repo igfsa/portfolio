@@ -28,6 +28,13 @@
   height: 100%;
   background-image: linear-gradient(to right, var(--back-menu) 0%, transparent 100%);
   text-align: left;
+
+  h3 {
+    justify-self: end;
+    font-size: medium;
+    padding-left: 10%;
+    padding-right: 30%;
+  }
 }
 
 .leg-rev {
@@ -35,20 +42,13 @@
   height: 100%;
   background-image: linear-gradient(to left, var(--back-menu) 0%, transparent 100%);
   text-align: right;
-}
 
-.leg h3{
-  justify-self: end;
-  font-size: medium;
-  padding-left: 10%;
-  padding-right: 30%;
-}
-
-.leg-rev h3{
-  justify-self: end;
-  font-size: medium;
-  padding-right: 10%;
-  padding-left: 30%;
+  h3{
+    justify-self: end;
+    font-size: medium;
+    padding-right: 10%;
+    padding-left: 30%;
+  }
 }
 
 .img-container {
@@ -56,6 +56,7 @@
   height: 100%;
   margin: 0;
 }
+
 
 @media (max-width: 768px) {
 
@@ -84,13 +85,12 @@
     height: auto;
     background-color: var(--back-menu);
     text-align: center;
-  }
 
-  .leg h3,
-  .leg-rev h3 {
-    justify-self: center;
-    font-size: medium;
-    padding: 2.5% 20%;
+    h3 {
+      justify-self: center;
+      font-size: medium;
+      padding: 2.5% 20%;
+    }
   }
 }
 

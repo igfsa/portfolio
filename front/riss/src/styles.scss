@@ -25,6 +25,10 @@
 
   --home-icon: #17A671;
 
+  // The bellow animations are set here because they are called in a TS function set of property
+
+  /* ==== Animation to move along the Y axis ==== */
+  // Used in home component for bar roll background effect and techno background effect
   @keyframes animate-Y {
     0%{
       transform: translateY(-50vh);
@@ -34,6 +38,8 @@
     }
   }
 
+  /* ==== Animation to move along the X axis ==== */
+  // Used in home component for rain background effect and techno background effect
   @keyframes animate-X {
     0%{
       transform: translateY(-50vw);
@@ -43,6 +49,7 @@
     }
   }
 
+  /* ==== Animation to grow and shrink ==== */
   @keyframes expand-collapse {
     0%{
       transform: scale(0.95);
@@ -52,6 +59,8 @@
     }
   }
 
+  /* ==== Animation to move effect ==== */
+  // Used in home component for finger move effect
   @keyframes move-finger {
     0%{
       transform: translateY(0);
@@ -112,6 +121,7 @@ h6{
 a{
   text-decoration: none;
   color: var(--text-color-light);
+
 }
 
 a:hover {
@@ -138,6 +148,7 @@ p{
 .btn:hover{
   background-color: var(--btn-hover);
 }
+
 
 .imgPrev {
   height: 100%;

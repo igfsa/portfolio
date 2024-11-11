@@ -13,6 +13,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 export class HeaderComponent {
   private offcanvasService = inject(NgbOffcanvas);
 
+  // ngBootstrap function to open off canvas in the right side of screen
 	openEnd(content: TemplateRef<any>) {
 		this.offcanvasService.open(content, { position: 'end' });
 	}

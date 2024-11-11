@@ -8,6 +8,7 @@ export class ViewportAnimationBarDirective implements OnInit {
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
+  // Animation that sets the begin of animation when user roll the viewport to element section
   ngOnInit() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

@@ -1,3 +1,5 @@
+/* ==== Egg button animations ==== */
+
 @keyframes open-egg {
   0% {
     transform: rotate(0deg) translate(0, 100%);
@@ -27,6 +29,8 @@
   }
 }
 
+/* ==== Saber icon animations ==== */
+
 @keyframes saber {
   0%{
     height: 0;
@@ -44,6 +48,8 @@
     height: 0;
   }
 }
+
+/* ==== Puzzle icon animations ==== */
 
 @keyframes piece-1 {
   0%{
@@ -198,6 +204,7 @@
   }
 }
 
+/* ==== General purpose animations ==== */
 
 @keyframes grow-height {
   0%{
@@ -226,9 +233,21 @@
   }
 }
 
+/* ==== End of animations ==== */
+
+
 .container{
   max-width: 1024px;
 }
+
+/* ==== Resume Section ==== */
+
+#resume{
+  opacity: 0;
+  animation: opacity-increase 2s normal ease-in 1 forwards;
+}
+
+/* ==== Storyline drawn ==== */
 
 .marker{
   margin: 0 auto;
@@ -236,6 +255,7 @@
   max-height: 25%;
   fill: var(--text-color);
   opacity: 0.85;
+
 }
 
 .marker:nth-child(even){
@@ -262,6 +282,37 @@
   animation: grow-height 1s normal 3000ms ease-in 1 forwards;
 }
 
+#journey-line {
+  height: 20vh;
+  position: relative;
+}
+
+#line {
+  height: 0.1vh;
+  width: 0;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  animation: grow-width 2s normal 1000ms ease-in 1 forwards;
+}
+
+#markers{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* ==== History text ==== */
+
+#history-line{
+  font-weight: lighter;
+  opacity: 0;
+  animation: opacity-increase 2s normal 3000ms ease-in 1 forwards;
+}
+
 .text-line{
   display: flex;
   align-items: stretch;
@@ -274,6 +325,11 @@
   align-items: center;
   position: relative;
   color: var(--text-color);
+
+  .vr{
+    margin: auto;
+    width: 0.3rem;
+  }
 }
 
 .circle-tl{
@@ -287,15 +343,12 @@
   translate: 50% 0;
 }
 
-.timeline .vr{
-  margin: auto;
-  width: 0.3rem;
-}
-
 .history-text{
   width: 80%;
   margin: 2.5% 0;
 }
+
+/* ==== Skills block ==== */
 
 @media (max-width: 768px) {
   .skills-div{
@@ -359,111 +412,6 @@
   word-wrap: break-word;
   padding: 0 0.5vh;
   box-sizing: content-box;
-}
-
-.ovo{
-  width: 50%;
-  background: none;
-  position: absolute;
-}
-
-.section {
-  display: flex;
-  align-items: start;
-  height: 20vh;
-  width: 100%;
-  margin: 5% 0;
-}
-
-.section-drawn{
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.section-text{
-  width: 80%;
-  height: 100%;
-}
-
-.vr {
-  height: 100%;
-  width: 0.3%;
-  border-radius: 2em;
-  padding: 0;
-  margin: 0 2.5%;
-}
-
-.lightsaber-box{
-  z-index: +1;
-  width: auto;
-  height: 20vh;
-}
-
-.light {
-  content: "";
-  animation: saber 5s normal infinite;
-  width: 1vh;
-  display: flex;
-  border-radius: 1vh 1vh 0 0;
-}
-
-.inner-light {
-  content: "";
-  animation: saber 5s normal infinite;
-  background-color: var(--text-color);
-  width: 0.4vh;
-  max-height: 95%;
-  display: flex;
-  margin: auto;
-  border-radius: 1vh 1vh 0 0;
-}
-
-.lightsaber{
-  z-index: +1;
-  width: auto;
-  height: 5vh;
-}
-
-.piece{
-  position: relative;
-  width: 20% * calc(72/94);
-  aspect-ratio: 1/1;
-}
-
-#journey-line {
-  height: 20vh;
-  position: relative;
-}
-
-#line {
-  height: 0.1vh;
-  width: 0;
-  background-color: var(--text-color);
-  position: absolute;
-  top: 50%;
-  animation: grow-width 2s normal 1000ms ease-in 1 forwards;
-}
-
-#markers{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  position: relative;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-#resume{
-  opacity: 0;
-  animation: opacity-increase 2s normal ease-in 1 forwards;
-}
-
-#history-line{
-  font-weight: lighter;
-  opacity: 0;
-  animation: opacity-increase 2s normal 3000ms ease-in 1 forwards;
 }
 
 #skills{
@@ -533,6 +481,16 @@
   flex-direction: column-reverse;
 }
 
+/* ==== Curiosity section ==== */
+
+/* ==== Egg button ==== */
+
+.ovo{
+  width: 50%;
+  background: none;
+  position: absolute;
+}
+
 #saibamais-button{
   background: none;
   border: none;
@@ -546,6 +504,7 @@
   animation: grow-egg 2s reverse forwards ease-in-out;
 
   transition: all 500ms;
+
 }
 
 #ovo-button:hover{
@@ -582,8 +541,34 @@
   transform-origin: 100% 0%;
 }
 
-#curiosity{
+/* ==== Sections layout ==== */
 
+.section {
+  display: flex;
+  align-items: start;
+  height: 20vh;
+  width: 100%;
+  margin: 5% 0;
+}
+
+.section-drawn{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-text{
+  width: 80%;
+  height: 100%;
+}
+
+.vr {
+  height: 100%;
+  width: 0.3%;
+  border-radius: 2em;
+  padding: 0;
+  margin: 0 2.5%;
 }
 
 #curiosity-title{
@@ -592,11 +577,15 @@
   margin: 5% 0;
 }
 
+/* ==== Movies section ==== */
+
 #movies {
   float: right;
   justify-content: flex-end;
   flex-direction: row-reverse;
 }
+
+/* ==== Saber drawn ==== */
 
 #lightsaber-box-1{
   rotate: 15deg;
@@ -604,6 +593,45 @@
 
 #lightsaber-box-2{
   rotate: -15deg;
+}
+
+.lightsaber-box{
+  z-index: +1;
+  width: auto;
+  height: 20vh;
+}
+
+.light {
+  content: "";
+  animation: saber 5s normal infinite;
+  width: 1vh;
+  display: flex;
+  border-radius: 1vh 1vh 0 0;
+}
+
+.inner-light {
+  content: "";
+  animation: saber 5s normal infinite;
+  background-color: var(--text-color);
+  width: 0.4vh;
+  max-height: 95%;
+  display: flex;
+  margin: auto;
+  border-radius: 1vh 1vh 0 0;
+}
+
+.lightsaber{
+  z-index: +1;
+  width: auto;
+  height: 5vh;
+}
+
+/* ==== Hobbies section/Puzzle drawn */
+
+.piece{
+  position: relative;
+  width: 20% * calc(72/94);
+  aspect-ratio: 1/1;
 }
 
 #hobbies{
@@ -656,6 +684,8 @@
   animation: piece-4 10s alternate infinite;
 }
 
+/* ==== Animals section ==== */
+
 #corvo-gif{
   width: 100%;
   max-height: 100%;
@@ -663,9 +693,8 @@
   border-radius: 50%;
 }
 
-#books{
+/* ==== Books section ==== */
 
-}
 
 #sh-box{
   width: 100%;
