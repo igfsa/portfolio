@@ -47,7 +47,7 @@
 
   <div id ="history-line">
 
-    <h1 class="titulo py-5 display-2">Um pouco sobre minha história...</h1>
+    <h1 class="titulo py-5 display-4">Um pouco sobre minha história...</h1>
 
     <div class = "text-line" data-aos="fade-right">
       <div class = "timeline">
@@ -111,7 +111,7 @@
   </div>
 
   <div id="skills-title">
-    <h2 class="display-2">Minhas Habilidades</h2>
+    <h2 class="display-4">Minhas Habilidades</h2>
   </div>
 
   <br>
@@ -207,9 +207,10 @@
       (click)="collapse.toggle()"
       [attr.aria-expanded]="!isCollapsed"
       [ngSwitch]="isCollapsed"
+
     >
 
-    <div *ngSwitchCase="true" id="ovo-button" class = "d-flex">
+    <div @change_justify *ngSwitchCase="true" id="ovo-button" class = "d-flex">
 
       <svg id="ovo_1" class="ovo" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.14 588.9">
         <g id="c" data-name="Camada 1">
@@ -225,7 +226,7 @@
     </div>
 
 
-    <div *ngSwitchCase="false" id="ovo-button-op" class = "d-flex">
+    <div @change_justify *ngSwitchCase="false" id="ovo-button-op" class = "d-flex">
 
       <svg id="ovo_1_op" class="ovo" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.14 588.9">
         <g id="c" data-name="Camada 1">
@@ -246,7 +247,7 @@
   <div id = "curiosity" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
 
     <div id="curiosity-title">
-      <h2 class="display-2">Curiosidades e fatos sobre mim</h2>
+      <h2 class="display-4">Curiosidades e fatos sobre mim</h2>
     </div>
 
 
@@ -272,6 +273,7 @@
       </div>
       <div class = "vr"></div>
       <div class = "section-text text-end" >
+        <h4 class="display-6">Hobbies</h4>
         <li class = "list-group-item">Adoro quebra-cabeças</li>
         <li class = "list-group-item">Sou um entusiasta por artes gráficas</li>
         <li class = "list-group-item">Sou apaixonado por esportes, apesar de um péssimo praticante</li>
@@ -288,6 +290,7 @@
       </div>
       <div class = "vr"></div>
       <div class = "section-text" >
+        <h4 class="display-6">Animais</h4>
         <li class = "list-group-item">Sempre tive animais</li>
         <li class = "list-group-item">No momento tenho 3 gatos um bando de calopsitas, um canário e um hamster</li>
         <li class = "list-group-item">Tenho vontade de ter um corvo, a inteligência deles me fascina</li>
@@ -334,11 +337,12 @@
       </div>
       <div class = "vr"></div>
       <div class = "section-text text-end" >
+        <h4 class="display-6">Filmes</h4>
         <li class = "list-group-item">Sou aficionado por filmes, acredito que contam a história humana e podem nos moldar.</li>
         <li class = "list-group-item">Top 3 franquias (apenas filmes):</li>
-        <li class = "list-group-item">Star Wars (primeira trilogia)</li>
-        <li class = "list-group-item">Shrek</li>
-        <li class = "list-group-item">Studio Ghibli (Não é franquia, mas não posso deixar de fora)</li>
+        <li class = "list-group-item">&#8226; Star Wars (primeira trilogia)</li>
+        <li class = "list-group-item">&#8226; Shrek</li>
+        <li class = "list-group-item">&#8226; Studio Ghibli (Não é franquia, mas não posso deixar de fora)</li>
       </div>
     </div>
 
@@ -362,11 +366,12 @@
       </div>
       <div class = "vr"></div>
       <div class = "section-text" >
+        <h4 class="display-6">Livros</h4>
         <li class = "list-group-item">Livros são mais poderosos que filmes e neles, somos agente da narrativa com nossa imaginação</li>
         <li class = "list-group-item">Top 3 coletâneas:</li>
-        <li class = "list-group-item">Sherlock Holmes</li>
-        <li class = "list-group-item">Senhor dos Anéis</li>
-        <li class = "list-group-item">Qualquer bom livro sobre mitologia</li>
+        <li class = "list-group-item">&#8226; Sherlock Holmes</li>
+        <li class = "list-group-item">&#8226; Senhor dos Anéis</li>
+        <li class = "list-group-item">&#8226; Qualquer bom livro sobre mitologia</li>
       </div>
     </div>
 

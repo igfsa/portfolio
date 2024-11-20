@@ -12,7 +12,7 @@
 @keyframes color-egg {
   0% {
     fill: var(--gray);
-    opacity: 0.1;
+    opacity: 0.5;
   }
   100% {
     fill: goldenrod;
@@ -238,6 +238,7 @@
 
 .container{
   max-width: 1024px;
+  margin-bottom: 0;
 }
 
 /* ==== Resume Section ==== */
@@ -329,6 +330,7 @@
   .vr{
     margin: auto;
     width: 0.3rem;
+    height: 100%;
   }
 }
 
@@ -487,6 +489,7 @@
 
 .ovo{
   width: 50%;
+  margin: auto;
   background: none;
   position: absolute;
 }
@@ -494,17 +497,19 @@
 #saibamais-button{
   background: none;
   border: none;
+  display: flex;
+  justify-content: center;
 }
 
 #ovo-button{
-  width: 5vw;
+  width: 2.5vw;
   max-height: 200%;
+  padding: auto;
   aspect-ratio: 1.45;
   position: relative;
   animation: grow-egg 2s reverse forwards ease-in-out;
 
   transition: all 500ms;
-
 }
 
 #ovo-button:hover{
@@ -514,19 +519,18 @@
 
 #ovo-button-op{
   width: 5vw;
+  padding-left: 0;
   aspect-ratio: 1.45;
   position: relative;
   animation: grow-egg 2s normal forwards ease-in-out;
 }
 
 #ovo_1{
-  left: 0;
   top: 0;
   animation: color-egg 2s reverse forwards ease-in-out;
 }
 
 #ovo_1_op{
-  left: 0;
   top: 0;
   animation: color-egg 2s normal forwards ease-in-out;
 }
@@ -545,9 +549,10 @@
 
 .section {
   display: flex;
-  align-items: start;
-  height: 20vh;
+  align-items: center;
+  height: max-content;
   width: 100%;
+  min-height: 20vh;
   margin: 5% 0;
 }
 
@@ -556,6 +561,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .section-text{
@@ -564,7 +570,7 @@
 }
 
 .vr {
-  height: 100%;
+  height: auto;
   width: 0.3%;
   border-radius: 2em;
   padding: 0;

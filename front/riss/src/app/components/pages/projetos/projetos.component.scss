@@ -1,0 +1,46 @@
+a{
+  color: var(--btn-hover);
+}
+
+.container{
+  max-width: 1024px;
+}
+
+.subtitulo{
+  color: var(--text-color);
+}
+
+.section{
+  margin-top: 7.5vh;
+}
+
+.item-line
+{
+  width: 100%;
+  min-height: 40vh;
+  height: auto;
+  padding: 7.5vh 0;
+  border-bottom: 2px solid var(--back-menu);
+  display: flex;
+  align-items: center;
+}
+
+img{
+  max-height: 100%;
+  height: auto;
+  width: 30%;
+}
+
+.item-text{
+  margin-left: 5%;
+
+}
+
+#apps-sites{
+
+}
+
+#others{
+
+}
+

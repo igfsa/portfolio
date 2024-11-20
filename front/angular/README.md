@@ -146,3 +146,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 &xrArr; O carousel pode ser feito de diferentes maneiras, que podem ser vistas no link do módulo.
 
 > <https://ng-bootstrap.github.io/#/components/carousel/examples>
+
+---
+
+## Icon ##
+
+&xrArr; O Ícone exibido na aba do navegador pode ser alterado através do arquivo `favicon.ico`, presente na pasta public do repositório do projeto. 
+
+&xrArr; Os arquivos .ico podem ser gerados utilizando outros arquivos de imagem, este [link](https://www.icoconverter.com/ "ico converter") realiza a conversão.

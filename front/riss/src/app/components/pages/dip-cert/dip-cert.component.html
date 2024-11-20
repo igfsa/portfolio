@@ -1,8 +1,8 @@
 <div class="container">
-  <h1 class="titulo">Diplomas e Certificados</h1>
-  <h2 class="subtitulo">Abaixo, os diplomas e certificados conquistados ao longo do período</h2>
+  <h1 class="titulo display-1">Diplomas e Certificados</h1>
+  <p class="fs-2 my-5 d-block" >Abaixo, os diplomas e certificados conquistados ao longo de minha trajetória</p>
 
-  <div>
+  <div id="list-comp ">
     <!-- Iterate over gallery and description and sets class to align left or right based on odd/even iteration value -->
     @for (item of img_dip; track item; let i = $index) {
       @if (i%2!=0){
@@ -15,7 +15,7 @@
               [src]="item"
               alt="{{descr_dip[$index]}}"
               [preview]="true"
-              class = "object-fit-cover rounded "
+              class = "object-fit-cover rounded"
               imageClass="imgPrev"
               >
             </p-image>
@@ -39,9 +39,7 @@
         </div>
       }
     }
-  </div>
 
-  <div>
     @for (item of img_cert; track item; let i = $index) {
       @if (i%2!=0){
         <div class = "item-line-rev mw-100" >
@@ -78,9 +76,7 @@
       }
     }
   </div>
+  <p class="fs-2 my-5 d-block" >Em breve, mais</p>
 
-  <p>
-    Em breve novos cursos.
-  </p>
 
 </div>

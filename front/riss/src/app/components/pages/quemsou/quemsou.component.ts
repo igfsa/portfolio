@@ -3,16 +3,34 @@ import { CommonModule } from '@angular/common';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ViewportAnimationBarDirective } from '../../../directive/viewportAnimation/viewport-animation-bar.directive';
-
-import { viewport } from '@popperjs/core';
-import * as AOS from "aos"
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-quemsou',
   standalone: true,
   imports: [CommonModule, NgbCollapseModule, ViewportAnimationBarDirective],
   templateUrl: './quemsou.component.html',
-  styleUrl: './quemsou.component.scss'
+  styleUrl: './quemsou.component.scss',
+  animations: [
+    trigger('change_justify', [
+      transition('true => false', [
+        animate('500ms',
+          style({margin: 'auto'})
+        )
+      ]),
+      transition('false => true', [
+        animate('500ms',
+          style({margin: '0'})
+        )
+      ])
+    ])
+  ]
 })
 export class QuemsouComponent implements AfterViewInit{
   @ViewChild('light1') box1!: ElementRef;
