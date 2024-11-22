@@ -8,7 +8,7 @@ import { ModalDismissReasons, NgbModal, NgbTooltipModule } from '@ng-bootstrap/n
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, RouterOutlet, NgbTooltipModule],
+  imports: [RouterLink, RouterLinkActive, NgbTooltipModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss', '../../../app.component.scss'],
 })
@@ -19,47 +19,37 @@ export class HomeComponent implements AfterViewInit{
 	closeResult = '';
 
   ngAfterViewInit(): void {
-    // functions to start and/or refresh gsap ScrollTrigger
-    // without it, the scroll position when leaving and reentering the page is sent to other value than the begin
-    if (!ScrollTrigger.getAll())
-    {
-      console.log(ScrollTrigger.getAll().length)
-      ScrollTrigger.refresh();
 
-    }
-
-    ScrollTrigger.enable();
-
+    this.conditionScrollTrigger();
 
     // background effects function
     this.rain();
     this.techno();
     this.barRoll();
 
-    // gsap enable and configuration for horizontal scrolling
-    gsap.registerPlugin(ScrollTrigger);
 
-    let sections = gsap.utils.toArray(".panel");
+    // recall functions at page resizing to adjust background and ScrollTrigger
+    window.addEventListener('resize', () => {
+      this.conditionScrollTrigger();
 
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".container-home",
-        pin: true,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        // base vertical scrolling on how wide the container is so it feels more natural.
-        end: "+=3500",
-      }
-    });
-
+      this.rain();
+      this.techno();
+      this.barRoll();
+    } );
   }
 
   ngOnDestroy(){
-    // functions to stop gsap ScrollTrigger when leaving page
-    // without it, the scroll behavior when changing components still the same as this page
-    ScrollTrigger.disable();
+    // Function to stop gsap ScrollTrigger and erase the settings when leaving page
+    // Without it, the scroll behavior when changing components still the same as this page
+    // On leave and reentering of the page, previous settings can cause some bugs in the plugin reactivation
+    if (ScrollTrigger.getAll().length > 0)
+    {
+      ScrollTrigger.killAll();
+    }
+
+    // Setting scrollbars to auto avoiding problems on pages change
+    document.getElementsByTagName('html')[0].style.scrollbarWidth = 'auto';
+    document.getElementsByTagName('html')[0].style.overscrollBehaviorX = 'auto';
   }
 
 	open(content: TemplateRef<any>) {
@@ -84,9 +74,60 @@ export class HomeComponent implements AfterViewInit{
 		}
 	}
 
+  // Function to check view size and conditionally apply scroll trigger
+  conditionScrollTrigger(): void{
+    if(window.innerWidth < 768 ){
+
+      if (ScrollTrigger.getAll().length != 0)
+      {
+        // Disabling ScrollTrigger in case of resize
+        ScrollTrigger.disable();
+      }
+
+      // Visually showing the scrollbar and inactivating in the X axis
+      document.getElementsByTagName('html')[0].style.scrollbarWidth = 'auto';
+      document.getElementsByTagName('html')[0].style.overscrollBehaviorX = 'hidden';
+    }
+    else{
+      // Function to start gsap ScrollTrigger. Needed when entering/reentering page or resizing from a screen size without the gsap use
+      ScrollTrigger.enable();
+
+      // Conditional to check if the ScrollTrigger parameters are not set and if true, register the parameters
+      // Without it, a duplicated write of the parameters causes a bug in the page view not rendering or not activating properly
+      if (ScrollTrigger.getAll().length == 0)
+      {
+        // gsap configuration for horizontal scrolling
+        gsap.registerPlugin(ScrollTrigger);
+
+        let sections = gsap.utils.toArray(".panel");
+
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".container-home",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (sections.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=3500",
+          }
+        });
+
+      }
+
+      // visually hiding the scrollbar without inactivating it. Visual purposes
+      document.getElementsByTagName('html')[0].style.scrollbarWidth = 'none';
+    }
+  }
+
   rain(): void{
     let amount = 100;
     let area = document.getElementById('bg-main');
+
+    const elements = document.querySelectorAll('.rain-drop');
+    elements.forEach(element => element.remove());
+
     let i = 0;
     while(i < amount){
       let drop = document.createElement("i");
@@ -121,6 +162,10 @@ export class HomeComponent implements AfterViewInit{
     let amount = 50;
     let area = document.getElementById('bg-projetos-home');
     let i = 0;
+
+    const elements = document.querySelectorAll('.techno-drop');
+    elements.forEach(element => element.remove());
+
     while(i < amount){
 
       let drop = document.createElement("i");
@@ -186,6 +231,10 @@ export class HomeComponent implements AfterViewInit{
   barRoll(): void{
     let amount = 15;
     let area = document.getElementById('bg-quem-sou-home');
+
+    const elements = document.querySelectorAll('.bar-drop');
+    elements.forEach(element => element.remove());
+
     let i = 0;
     while(i < amount){
 
