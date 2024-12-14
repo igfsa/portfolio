@@ -12,19 +12,29 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav">
           <li class="nav-item nav-link">
-            <a class="nav-link active" routerLink="" routerLinkActive="active" >Início</a>
+            <button class="nav-link active" (click)="offcanvas.dismiss('Close click')">
+              <a routerLink="" routerLinkActive="active" >Início</a>
+            </button>
           </li>
           <li class="nav-item nav-link">
-            <a class="nav-link active" routerLink="/quem-sou" routerLinkActive="active" >Quem sou</a>
+            <button class="nav-link active" (click)="offcanvas.dismiss('Close click')">
+              <a routerLink="/quem-sou" routerLinkActive="active" >Quem sou</a>
+            </button>
           </li>
           <li class="nav-item nav-link">
-            <a class="nav-link active" routerLink="/projetos" routerLinkActive="active" >Projetos</a>
+            <button  class="nav-link active" (click)="offcanvas.dismiss('Close click')">
+              <a routerLink="/projetos" routerLinkActive="active" >Projetos</a>
+            </button>
           </li>
           <li class="nav-item nav-link">
-            <a class="nav-link active" routerLink="/dip-cert" routerLinkActive="active" >Diplomas e certificados</a>
+            <button class="nav-link active" (click)="offcanvas.dismiss('Close click')">
+              <a routerLink="/dip-cert" routerLinkActive="active" >Diplomas e certificados</a>
+            </button>
           </li>
           <li class="nav-item nav-link">
-            <a class="nav-link active" routerLink="" >Contato</a>
+            <button class="nav-link active" (click)="offcanvas.dismiss('Close click'); scrollToContato();">
+              <span>Contato</span>
+            </button>
           </li>
         </ul>
       </div>

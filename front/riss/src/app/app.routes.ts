@@ -8,9 +8,10 @@ import { DipCertComponent } from './components/pages/dip-cert/dip-cert.component
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'home', redirectTo: ''},
   {path: 'projetos', component: ProjetosComponent},
   {path: 'quem-sou', component: QuemsouComponent},
   {path: 'footer', component: FooterComponent},
-  {path: 'dip-cert', component: DipCertComponent}
+  {path: 'dip-cert', component: DipCertComponent},
 
 ];

@@ -47,7 +47,7 @@ export class HomeComponent implements AfterViewInit{
       ScrollTrigger.killAll();
     }
 
-    // Setting scrollbars to auto avoiding problems on pages change
+    // Setting scrollbars to auto to avoiding problems on pages change
     document.getElementsByTagName('html')[0].style.scrollbarWidth = 'auto';
     document.getElementsByTagName('html')[0].style.overscrollBehaviorX = 'auto';
   }
@@ -77,7 +77,6 @@ export class HomeComponent implements AfterViewInit{
   // Function to check view size and conditionally apply scroll trigger
   conditionScrollTrigger(): void{
     if(window.innerWidth < 768 ){
-
       if (ScrollTrigger.getAll().length != 0)
       {
         // Disabling ScrollTrigger in case of resize
@@ -105,7 +104,7 @@ export class HomeComponent implements AfterViewInit{
           xPercent: -100 * (sections.length - 1),
           ease: "none",
           scrollTrigger: {
-            trigger: ".container-home",
+            trigger: "#container-home",
             pin: true,
             scrub: 1,
             snap: 1 / (sections.length - 1),
