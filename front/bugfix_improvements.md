@@ -1,10 +1,8 @@
 # Bugfix :warning: #
 
-1. Contact nav icon redirect to contact section in home page 
-
 ## Solved :ok_hand: ##
 
-&xrArr; Fixed at once on 22/11/2024. Removed ScrollTrigger in small views for better use and created functions to enable and disable the plug-in, witch was generating view issues and scroll problems.  
+&xrArr; Fixed at once on 22/11/2024. Removed ScrollTrigger in small views for better use and created functions to enable and disable the plug-in, wich was generating view issues and scroll problems.  
 
 ~~1. Home mobile view~~
     
@@ -15,6 +13,10 @@
    ~~3. Header size~~
     
    ~~> Maybe will be fixed at once~~
+
+&xrArr; Fixed on 08/01/2025. Implemented a modal to the contato button instead of redirecting to section in homepage. Also fixed media query for devices. Now devices with touch cursors of any size wont apply ScrollTrigger and horizontal panel styles.
+
+~~1. Contact nav icon redirect to contact section in home page~~
 
 ---
 
