@@ -14,7 +14,7 @@ a{
   margin-top: 7.5vh;
 }
 
-.item-line
+.item-line:nth-child(even)
 {
   width: 100%;
   min-height: 40vh;
@@ -23,24 +23,38 @@ a{
   border-bottom: 2px solid var(--back-menu);
   display: flex;
   align-items: center;
+
+  .item-text{
+    margin-left: 5%;
+    width: 70%;
+  }
+}
+
+.item-line:nth-child(odd)
+{
+  width: 100%;
+  min-height: 40vh;
+  height: auto;
+  padding: 7.5vh 0;
+  border-bottom: 2px solid var(--back-menu);
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  .item-text{
+    margin-right: 5%;
+    width: 70%;
+  }
+
+  h3,
+  p{
+    text-align: right;
+  }
 }
 
 img{
   max-height: 100%;
   height: auto;
   width: 30%;
-}
-
-.item-text{
-  margin-left: 5%;
-  width: 70%;
-}
-
-#apps-sites{
-
-}
-
-#others{
-
 }
 
