@@ -70,6 +70,16 @@
     }
   }
 
+
+  @keyframes opacity-increase {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
   @font-face {
     font-family: 'CaskaydiaCoveNerdFontMono-Regular';
     src: url("./assets/fonts/CaskadiaCoveNerdFontMono/CaskaydiaCoveNerdFontMono-Regular.ttf") format('truetype');
@@ -138,6 +148,8 @@ p{
   margin: 10vh auto 15vh;
   padding:  5%;
   max-width: 100vw;
+  opacity: 0;
+  animation: opacity-increase 2s normal ease-in 1 forwards;
 }
 
 .btn{

@@ -7,6 +7,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { HomeComponent } from "./components/pages/home/home.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { QuemsouComponent } from './components/pages/quemsou/quemsou.component';
+import { Macoratti_webappComponent } from './components/pages/macoratti_webapp/macoratti_webapp.component';
 
 import { routes } from './app.routes';
 import * as AOS from 'aos'
@@ -24,6 +25,7 @@ import * as AOS from 'aos'
     FooterComponent,
     ProjetosComponent,
     QuemsouComponent,
+    Macoratti_webappComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
@@ -63,6 +65,4 @@ export class AppComponent implements OnInit{
 
     this.router.resetConfig(routes);
   }
-
-
 }

@@ -5,12 +5,14 @@ import { ProjetosComponent } from './components/pages/projetos/projetos.componen
 import { QuemsouComponent } from './components/pages/quemsou/quemsou.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DipCertComponent } from './components/pages/dip-cert/dip-cert.component';
+import { Macoratti_webappComponent } from './components/pages/macoratti_webapp/macoratti_webapp.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'projetos', component: ProjetosComponent},
   {path: 'quem-sou', component: QuemsouComponent},
   {path: 'footer', component: FooterComponent},
-  {path: 'dip-cert', component: DipCertComponent}
+  {path: 'dip-cert', component: DipCertComponent},
+  {path: 'macoratti', component: Macoratti_webappComponent}
 
 ];

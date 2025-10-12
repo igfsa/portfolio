@@ -19,7 +19,7 @@ export class DipCertComponent {
   img_dip: string[] =
   [
     '../../assets/diplomas/NP.png',
-    '../../assets/diplomas/COLTEC.jpg',
+    '../../assets/diplomas/COLTEC.png',
     '../../assets/media/rocket.png'
   ];
 

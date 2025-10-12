@@ -5,7 +5,6 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewportAnimationBarDirective } from '../../../directive/viewportAnimation/viewport-animation-bar.directive';
 import {
   trigger,
-  state,
   style,
   animate,
   transition,

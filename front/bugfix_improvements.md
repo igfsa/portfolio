@@ -2,7 +2,7 @@
 
 ## Solved :ok_hand: ##
 
-&xrArr; Fixed at once on 22/11/2024. Removed ScrollTrigger in small views for better use and created functions to enable and disable the plug-in, wich was generating view issues and scroll problems.  
+&xrArr; Fixed at once on 22/11/2024. Removed ScrollTrigger in small views for better use and created functions to enable and disable the plug-in, which was generating view issues and scroll problems.  
 
 ~~1. Home mobile view~~
     
