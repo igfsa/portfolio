@@ -1,64 +1,58 @@
 # Angular #
 
-## Instalação ##
+## Preparando o ambiente e instalando o Angular ##
 
-&xrArr; Para utilizar o Angular, deve estar instalado na máquina a Angular CLI, processo que pode ser feito através do NPM (Node Package Manager), um recurso do Node.js
+&xrArr; Para instalar o angular, [o node deve estar instalado](https://nodejs.org/en/download/).
 
-&xrArr; Para instalar o Node.js devem ser executados os comandos abaixo:
+&xrArr; No linux, o node pode ser atualizado com os comandos:
 
 ``` shell
-# instala a nvm (Node Version Manager, ou Gestor de Pacote de Node)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-# descarregar e instalar a Node.js (podemos precisar de reiniciar o terminal)
-nvm install 20
-# verifica se a versão correta da Node.js está no ambiente
-node -v # deve imprimir `v20.17.0`
-# verifica se a versão correta da npm está no ambiente
-npm -v # deve imprimir `10.8.2`
+$ nvm install --lts
+$ nvm alias default <versao_lts> vr   
 ```
 
-<https://nodejs.org/pt/download/package-manager>
+&xrArr; Com o node instalado, devemos usar o comando (como admin):
 
-> As versões indicadas são relativas à 09/24.
+`$ npm install --location=global @angular/cli`
 
-A versão dos recursos podem ser vistas através do comando `nvm list`.
+&xrArr; No Windows, devido a questões de política de segurança, é necessário rodar o seguinte comando:
 
-&xrArr; Com o Node.js instalado, é possível executar o seguinte comando através do NPM:
+`$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
-`$ npm install -g @angular/cli`
+> `-ExecutionPolicy` determina a política de execução e `-Scope` determina o escopo onde sera executada a ação (*obs: caso o computador não seja de uso público/coletivo, não é necessário executa-la no modo CurrentUser)
 
-A versão do Angular pode ser vista através do comando `ng version`.
+&xrArr; Com o Angular instalado, a tabela abaixo indica os principais comandos e serem usados no terminal, através da interface angular ou do próprio NPM.
+
+Comandos angular| Atalho npm
+----------------|-----------------
+$ ng            | $ npm ng
+$ ng serve      | $ npm start
+$ ng build      | $ npm build
+$ ng test       | $ npm test
+$ ng lint       | $ npm lint
+$ ng e2e        | $ npm e2e
 
 ---
 
 ## Iniciando o projeto ##
 
-&xrArr; Para iniciar o projeto, o seguinte comando deve ser executado na pasta onde o front será armazenado:
+&xrArr; Para criar uma aplicação, devemos executar o comando (como admin):
 
-`$ ng new <nome_projeto>`
+`$ ng new <nome da aplicação>`
 
-&xrArr; Os projetos Angular são trabalhados através de componentes, que são acessados, originalmente, através do arquivo index.html, presente na pasta src. Neste arquivo, os demais componentes podem ser acessados como partes da página. No arquivo main.ts, estão os códigos em TypeScript e no arquivo styles.scss estão os códigos em Scss. Estes arquivos trabalham em conjunto através do arquivo angular.json, que faz com que o projeto em TS e Scss, além dos componentes Angular, sejam processados para HTML, CSS e JS puros. 
-O funcionamento dos componentes ocorre de forma similar, assim, todos componentes devem ter um HTML, um SCSS e um JS. 
-
----
-
-## Testando o Projeto ##
-
-&xrArr; Para testar o projeto localmente, pode ser rodado o seguinte comando no terminal:
-
-`$ ng serve`
+&xrArr; Os projetos Angular são trabalhados através de componentes, que são acessados, originalmente, através do arquivo index.html, presente na pasta src. Neste arquivo, os demais componentes podem ser acessados como partes da página. No arquivo main.ts, estão os códigos em TypeScript e no arquivo styles.scss estão os códigos em Scss. Estes arquivos trabalham em conjunto através do arquivo angular.json, que faz com que o projeto em TS e Scss, além dos componentes Angular, sejam processados para HTML, CSS e JS puros. O funcionamento dos componentes ocorre de forma similar, assim, todos componentes devem ter um HTML, um SCSS e um JS.
 
 ---
 
 ## Componentes ##
 
-&xrArr; Com o projeto iniciado, a construção pode ser feita através de componentes já existentes, importados de pacotes externos, ou através de componentes criados dentro do projeto. 
+&xrArr; Com o projeto iniciado, a construção pode ser feita através de componentes já existentes, importados de pacotes externos, ou através de componentes criados dentro do projeto.
 
-&xrArr; Ao utilizar um componente externo, o pacote deve ser instalado no projeto e no arquivo TS do componente onde será feita a utilização, um import deve ser realizado. 
+&xrArr; Ao utilizar um componente externo, o pacote deve ser instalado no projeto e no arquivo TS do componente onde será feita a utilização, um import deve ser realizado.
 
 &xrArr; Para componentes criados, o import no arquivo TS deve ser realizado através do caminho relativo do componente a ser utilizado.
 
-&xrArr; O import dos componentes deve ser feito no arquivo TS do componente que irá referenciar outro. 
+&xrArr; O import dos componentes deve ser feito no arquivo TS do componente que irá referenciar outro.
 
 ``` typescript
 import { Component } from '@angular/core';
@@ -80,19 +74,21 @@ export class ExemploComponent {
 
 `$ ng g c <nome_componente>`
 
-&xrArr; Dentro do arquivo TS do component também é possível determinar o seletor para o component em HTML, definir qual arquivo HTML será usado para o component e definir arquivos de estilo para referência. Pode ser utilizado mais de um arquivo de estilo para um mesmo component, recurso que é possível ao trocar a propriedade padrão de `styleUrl`, que recebe apenas um arquivo, por padrão o arquivo do component, para a propriedade `styleUrls`, a qual recebe um vetor de strings, onde cada string é o caminho de cada arquivo. 
+> 'g' significa o parâmetro generate e 'c' o parâmetro component
+
+&xrArr; Dentro do arquivo TS do component também é possível determinar o seletor para o component em HTML, definir qual arquivo HTML será usado para o component e definir arquivos de estilo para referência. Pode ser utilizado mais de um arquivo de estilo para um mesmo component, recurso que é possível ao trocar a propriedade padrão de `styleUrl`, que recebe apenas um arquivo, por padrão o arquivo do component, para a propriedade `styleUrls`, a qual recebe um vetor de strings, onde cada string é o caminho de cada arquivo.
 
 ---
 
 ## Routes ##
 
-&xrArr; Para acessar outros componentes através de navegação entre páginas, é necessário configurar as rotas da aplicação. 
+&xrArr; Para acessar outros componentes através de navegação entre páginas, é necessário configurar as rotas da aplicação.
 
 &xrArr; Este processo pode ser feito no arquivo app.routes.ts, presente na pasta app do projeto.
 
-&xrArr; É necessário realizar o import do componente Routes, do próprio Angular, e também dos componentes a serem utilizados. 
+&xrArr; É necessário realizar o import do componente Routes, do próprio Angular, e também dos componentes a serem utilizados.
 
-&xrArr; Na função export do arquivo devem ser indicados os objetos de destino das rotas, onde em um vetor, os objetos devem indicar o caminho a ser usado como referência e o component relacionado a este caminho. 
+&xrArr; Na função export do arquivo devem ser indicados os objetos de destino das rotas, onde em um vetor, os objetos devem indicar o caminho a ser usado como referência e o component relacionado a este caminho.
 
 ``` typescript
 import { Routes } from '@angular/router';
@@ -133,24 +129,48 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 ---
 
+## Testando o Projeto ##
+
+&xrArr; Para testar o projeto localmente, pode ser rodado o seguinte comando no terminal:
+
+`$ ng serve`
+
+---
+
+## Instalando recursos ##
+
+&xrArr; Instalando o Font Awesome (ferramenta para ícones)
+
+`$ npm install --save @fortawesome/fontawesome-free`
+
+&xrArr; Instalando o ngx-bootstrap (ferramenta de integração entre o bootstrap e o angular)
+
+`$ ng add ngx-bootstrap`
+
+&xrArr; É necessário adicionar no head da página o link para o css do bootstrap
+
+>OBS.: O ngx-bootstrap atualiza aos poucos a compatibilidade com as versões. No caso da versão usada no projeto não ser a versão corrente do ngx, é necessário adicionar os recursos manualmente
+
+&xrArr; É necessário realizar imports para o scss principal do projeto.
+
+---
+
 ## Carousel ##
 
-&xrArr; Carousel de imagens podem ser criados através de componentes personalizados. 
+&xrArr; Carousel de imagens podem ser criados através de componentes personalizados.
 
 &xrArr; O módulo `@ng-bootstrap/ng-bootstrap` pode ser utilizado, porém é necessário instalação no projeto.
 
-&xrArr; Instalações podem ser feitas através do comando: 
+&xrArr; Instalações podem ser feitas através do comando:
 
 `$ ng add <modulo>`
 
-&xrArr; O carousel pode ser feito de diferentes maneiras, que podem ser vistas no link do módulo.
-
-> <https://ng-bootstrap.github.io/#/components/carousel/examples>
+&xrArr; O carousel pode ser feito de diferentes maneiras, que podem ser vistas no [link do módulo](<https://ng-bootstrap.github.io/#/components/carousel/examples>).
 
 ---
 
 ## Icon ##
 
-&xrArr; O Ícone exibido na aba do navegador pode ser alterado através do arquivo `favicon.ico`, presente na pasta public do repositório do projeto. 
+&xrArr; O Ícone exibido na aba do navegador pode ser alterado através do arquivo `favicon.ico`, presente na pasta public do repositório do projeto.
 
-&xrArr; Os arquivos .ico podem ser gerados utilizando outros arquivos de imagem, este [link](https://www.icoconverter.com/ "ico converter") realiza a conversão.
+&xrArr; Os arquivos .ico podem ser gerados utilizando outros arquivos de imagem, [este link](https://www.icoconverter.com/ "ico converter") realiza a conversão.
