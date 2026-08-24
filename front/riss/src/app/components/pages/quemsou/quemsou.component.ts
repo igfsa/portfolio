@@ -11,25 +11,20 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-quemsou',
-  standalone: true,
-  imports: [CommonModule, NgbCollapseModule, ViewportAnimationBarDirective],
-  templateUrl: './quemsou.component.html',
-  styleUrl: './quemsou.component.scss',
-  animations: [
-    trigger('change_justify', [
-      transition('true => false', [
-        animate('500ms',
-          style({margin: 'auto'})
-        )
-      ]),
-      transition('false => true', [
-        animate('500ms',
-          style({margin: '0'})
-        )
-      ])
-    ])
-  ]
+    selector: 'app-quemsou',
+    imports: [CommonModule, NgbCollapseModule, ViewportAnimationBarDirective],
+    templateUrl: './quemsou.component.html',
+    styleUrl: './quemsou.component.scss',
+    animations: [
+        trigger('change_justify', [
+            transition('true => false', [
+                animate('500ms', style({ margin: 'auto' }))
+            ]),
+            transition('false => true', [
+                animate('500ms', style({ margin: '0' }))
+            ])
+        ])
+    ]
 })
 export class QuemsouComponent implements AfterViewInit{
   @ViewChild('light1') box1!: ElementRef;

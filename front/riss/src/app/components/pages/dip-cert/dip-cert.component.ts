@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { NgbCollapseModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-dip-cert',
-  standalone: true,
-  imports: [ ImageModule, CommonModule, NgbCollapseModule, NgbTooltipModule ],
-  templateUrl: './dip-cert.component.html',
-  styleUrl: './dip-cert.component.scss',
+    selector: 'app-dip-cert',
+    imports: [ImageModule, CommonModule, NgbCollapseModule, NgbTooltipModule],
+    templateUrl: './dip-cert.component.html',
+    styleUrl: './dip-cert.component.scss'
 })
 export class DipCertComponent {
 

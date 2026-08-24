@@ -4,12 +4,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgbModal, NgbTooltipModule, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive, RouterOutlet, NgbTooltipModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss', '../../app.component.scss']
-
+    selector: 'app-header',
+    imports: [RouterLink, RouterLinkActive, RouterOutlet, NgbTooltipModule],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss', '../../app.component.scss']
 })
 
 export class HeaderComponent {

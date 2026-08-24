@@ -6,11 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ModalDismissReasons, NgbModal, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgbTooltipModule],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', '../../../app.component.scss'],
+    selector: 'app-home',
+    imports: [RouterLink, RouterLinkActive, NgbTooltipModule],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss', '../../../app.component.scss']
 })
 
 export class HomeComponent implements AfterViewInit{
