@@ -20,14 +20,14 @@ export class DipCertComponent {
   [
     '../../assets/diplomas/NP.png',
     '../../assets/diplomas/COLTEC.png',
-    '../../assets/media/rocket.png'
+    '../../assets/diplomas/UNICIVE.png'
   ];
 
   descr_dip: string[] =
   [
+    "Especialização em Desenvolvimento de sistemas com C#",
     'Diploma de Tecnólogo em Análise e Desenvolvimento de Sistemas',
     'Diploma do curso técnico integrado com o médio em Automação Industrial',
-    "Em curso: Especialização em Desenvolvimento de sistemas com C#. Previsão de conclusão: 02/2026"
   ];
 
   img_cert: string[] =

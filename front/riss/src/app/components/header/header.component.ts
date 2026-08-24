@@ -19,7 +19,7 @@ export class HeaderComponent {
 
   // ngBootstrap function to open off canvas in the right side of screen
 	openEnd(content: TemplateRef<any>) {
-		this.offcanvasService.open(content, { position: 'end' });
+		this.offcanvasService.open(content);
 	}
 
   open(content: TemplateRef<any>) {

@@ -1,31 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 
-import { DipCertComponent } from './components/pages/dip-cert/dip-cert.component';
-import { ProjetosComponent } from './components/pages/projetos/projetos.component';
 import { HeaderComponent } from "./components/header/header.component";
-import { HomeComponent } from "./components/pages/home/home.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { QuemsouComponent } from './components/pages/quemsou/quemsou.component';
-import { Macoratti_webappComponent } from './components/pages/macoratti_webapp/macoratti_webapp.component';
 
 import { routes } from './app.routes';
-import * as AOS from 'aos'
+import AOS from 'aos'
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
-    DipCertComponent,
     HeaderComponent,
-    HomeComponent,
     FooterComponent,
-    ProjetosComponent,
-    QuemsouComponent,
-    Macoratti_webappComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
