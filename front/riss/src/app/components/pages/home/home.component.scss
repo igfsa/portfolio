@@ -106,15 +106,12 @@
 .modal-header{
   background-color: var(--back-black);
   border-bottom: 1px solid var(--gray);
+  padding: 0.5rem 2rem;
 }
 
 .modal-body{
   background-color: #1f1f1f;
-}
-
-.modal-footer{
-  background-color: var(--back-black);
-  border-top: 1px solid var(--gray);
+  padding: 2rem;
 }
 
 @media (max-width: 768px) or (any-pointer: coarse){

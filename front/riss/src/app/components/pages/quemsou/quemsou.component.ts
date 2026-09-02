@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccordionModule } from 'primeng/accordion';
 
 import { ViewportAnimationBarDirective } from '../../../directive/viewportAnimation/viewport-animation-bar.directive';
 import {
@@ -12,15 +12,15 @@ import {
 
 @Component({
     selector: 'app-quemsou',
-    imports: [CommonModule, NgbCollapseModule, ViewportAnimationBarDirective],
+    imports: [CommonModule, AccordionModule, ViewportAnimationBarDirective],
     templateUrl: './quemsou.component.html',
     styleUrl: './quemsou.component.scss',
     animations: [
         trigger('change_justify', [
-            transition('true => false', [
+            transition('false => true', [
                 animate('500ms', style({ margin: 'auto' }))
             ]),
-            transition('false => true', [
+            transition('true => false', [
                 animate('500ms', style({ margin: '0' }))
             ])
         ])
@@ -32,8 +32,6 @@ export class QuemsouComponent implements AfterViewInit{
   colors: string[] = ['#ff00ff','#ff0000','#00ff00','#0000ff', '#ffff00', '#ffa500', '#ffffff'];
   color1: string = '#ff0000';
   color2: string = '#00ff00';
-
-	isCollapsed = true;
 
   ngAfterViewInit() {
     this.box1.nativeElement.addEventListener('animationiteration', () => {

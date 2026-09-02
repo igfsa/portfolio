@@ -413,7 +413,7 @@
   background-color: #1f1f1f;
   border-block: 2px var(--gray) ridge;
   padding-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 #skills-title{
@@ -487,6 +487,15 @@
   position: absolute;
 }
 
+.saibamais,
+.saibamais:hover{
+  background: none !important;
+  border: none;
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+}
+
 #saibamais-button{
   background: none;
   border: none;
@@ -495,7 +504,7 @@
 }
 
 #ovo-button{
-  width: 40px;
+  width: 4rem;
   padding: auto;
   aspect-ratio: 1.45;
   position: relative;
@@ -510,7 +519,7 @@
 }
 
 #ovo-button-op{
-  width: 80px;
+  width: 8rem;
   padding-left: 0;
   aspect-ratio: 1.45;
   position: relative;
@@ -538,6 +547,10 @@
 }
 
 /* ==== Sections layout ==== */
+
+.section-accordion {
+  background: none !important;
+}
 
 .section {
   display: flex;

@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { ImageModule } from 'primeng/image';
+import { GalleriaModule } from 'primeng/galleria';
 import { CommonModule } from '@angular/common';
-import { NgbCollapseModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-dip-cert',
-    imports: [ImageModule, CommonModule, NgbCollapseModule, NgbTooltipModule],
+    imports: [
+      ImageModule,
+      CommonModule,
+      GalleriaModule
+    ],
     templateUrl: './dip-cert.component.html',
     styleUrl: './dip-cert.component.scss'
 })
@@ -13,38 +17,20 @@ export class DipCertComponent {
 
 	isCollapsed = true;
 
-  // used in the html component in the for loops to auto create elements over the string iteration
-
-  img_dip: string[] =
+  imagesDip =
   [
-    '../../assets/diplomas/NP.png',
-    '../../assets/diplomas/COLTEC.png',
-    '../../assets/diplomas/UNICIVE.png'
+    {img: '../../assets/diplomas/NP.png', desc: "Especialização em Desenvolvimento de sistemas com C#"},
+    {img: '../../assets/diplomas/COLTEC.png', desc: 'Diploma de Tecnólogo em Análise e Desenvolvimento de Sistemas'},
+    {img: '../../assets/diplomas/UNICIVE.png', desc: 'Diploma do curso técnico integrado com o médio em Automação Industrial'}
   ];
 
-  descr_dip: string[] =
+  imagesCert =
   [
-    "Especialização em Desenvolvimento de sistemas com C#",
-    'Diploma de Tecnólogo em Análise e Desenvolvimento de Sistemas',
-    'Diploma do curso técnico integrado com o médio em Automação Industrial',
-  ];
-
-  img_cert: string[] =
-  [
-    '../../assets/certificados/git_github_GU.jpg',
-    '../../assets/certificados/web_designer_css_html.jpg',
-    '../../assets/certificados/programacao_C_C++_OneDayCode.jpg',
-    '../../assets/certificados/programacao_C_GU.jpg',
-    '../../assets/certificados/programacao_python_GU.jpg',
-  ];
-
-  descr_cert: string[] =
-  [
-    'Certificado de curso de Git e GitHub na plataforma Udemy',
-    'Certificado de curso de HTML e CSS para Web Design na plataforma Udemy',
-    'Certificado de curso de Programação em C e C++ na plataforma Udemy',
-    'Certificado de curso de Programação em C na plataforma Udemy',
-    'Certificado de curso de Python na plataforma Udemy',
+    {img: '../../assets/certificados/git_github_GU.jpg', desc: 'Certificado de curso de Git e GitHub na plataforma Udemy'},
+    {img: '../../assets/certificados/web_designer_css_html.jpg', desc: 'Certificado de curso de HTML e CSS para Web Design na plataforma Udemy'},
+    {img: '../../assets/certificados/programacao_C_C++_OneDayCode.jpg', desc: 'Certificado de curso de Programação em C e C++ na plataforma Udemy'},
+    {img: '../../assets/certificados/programacao_C_GU.jpg', desc: 'Certificado de curso de Programação em C na plataforma Udemy'},
+    {img: '../../assets/certificados/programacao_python_GU.jpg', desc: 'Certificado de curso de Python na plataforma Udemy'},
   ];
 
 }

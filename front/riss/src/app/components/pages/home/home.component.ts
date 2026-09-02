@@ -2,20 +2,19 @@ import { AfterViewInit, Component, inject, TemplateRef } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Dialog } from "primeng/dialog";
 
-import { ModalDismissReasons, NgbModal, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-home',
-    imports: [RouterLink, RouterLinkActive, NgbTooltipModule],
+    imports: [RouterLink, RouterLinkActive, Dialog],
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss', '../../../app.component.scss']
 })
 
 export class HomeComponent implements AfterViewInit{
 
-	private modalService = inject(NgbModal);
-	closeResult = '';
+  navegacaoInfo: boolean = false;
 
   ngAfterViewInit(): void {
 
@@ -50,28 +49,6 @@ export class HomeComponent implements AfterViewInit{
     document.getElementsByTagName('html')[0].style.scrollbarWidth = 'auto';
     document.getElementsByTagName('html')[0].style.overscrollBehaviorX = 'auto';
   }
-
-	open(content: TemplateRef<any>) {
-		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', centered: true }).result.then(
-			(result) => {
-				this.closeResult = `Closed with: ${result}`;
-			},
-			(reason) => {
-				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-			},
-		);
-	}
-
-	private getDismissReason(reason: any): string {
-		switch (reason) {
-			case ModalDismissReasons.ESC:
-				return 'by pressing ESC';
-			case ModalDismissReasons.BACKDROP_CLICK:
-				return 'by clicking on a backdrop';
-			default:
-				return `with: ${reason}`;
-		}
-	}
 
   // Function to check view size and conditionally apply scroll trigger
   conditionScrollTrigger(): void{

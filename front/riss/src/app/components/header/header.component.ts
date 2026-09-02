@@ -1,27 +1,28 @@
-import { Component, inject, TemplateRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
-import { NgbModal, NgbTooltipModule, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
+import { Drawer, DrawerModule } from 'primeng/drawer';
+import { DialogModule  } from 'primeng/dialog';
+
 
 @Component({
     selector: 'app-header',
-    imports: [RouterLink, RouterLinkActive, RouterOutlet, NgbTooltipModule],
+    imports: [
+      RouterLink,
+      RouterLinkActive,
+      RouterOutlet,
+      DrawerModule,
+      Drawer,
+      DialogModule
+    ],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss', '../../app.component.scss']
 })
 
 export class HeaderComponent {
-  private offcanvasService = inject(NgbOffcanvas);
-	private modalService = inject(NgbModal);
-	closeResult = '';
 
-  // ngBootstrap function to open off canvas in the right side of screen
-	openEnd(content: TemplateRef<any>) {
-		this.offcanvasService.open(content);
-	}
+  menuVisible: boolean = false;
 
-  open(content: TemplateRef<any>) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', centered: true, size: 'lg', container: 'body', })
-	}
+  contatoVisible: boolean = false;
 
 }

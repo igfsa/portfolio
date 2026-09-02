@@ -1,29 +1,8 @@
 <div id="container-home" class="d-flex flex-wrap ">
 
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h3 class="modal-title" id="modal-basic-title">Navegação</h3>
-      <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <p>
-            Clique nos ícones de cada sessão para ir para a página correspondente.
-            <br>
-            A navegação também pode ser feita pelo menu lateral.
-          </p>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-secondary" (click)="modal.close('Save click')">Ok</button>
-    </div>
-  </ng-template>
-
   <div id = "bg-main" class="panel">
     <div class = "bg-sub position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center ">
-      <button id = "home-button" class="" (click)="open(content)" >
+      <button id = "home-button" class="" (click)="navegacaoInfo = true" >
         <div class = "main-sub position-relative d-flex align-items-center flex-end" >
           <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill = "currentColor"
           viewBox="0 0 110 75" style="enable-background:new 0 0 110 75;" xml:space="preserve" placement="top" ngbTooltip="Clique aqui" tooltipClass="tooltip">
@@ -109,6 +88,27 @@
           </svg>
         </div>
       </button>
+
+      <p-dialog [(visible)]="navegacaoInfo" styleClass="menu-drawer">
+        <ng-template #headless>
+          <div class="modal-header d-flex justify-content-between">
+            <h3 id="modal-basic-title" class="modal-title display-6 section-title">Navegação</h3>
+            <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="navegacaoInfo = false"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <p>
+                  Clique nos ícones de cada sessão para ir para a página correspondente.
+                  <br>
+                  A navegação também pode ser feita pelo menu lateral.
+                </p>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+      </p-dialog>
+
       <div class = "vr align-self-center"></div>
       <div class = "main-sub d-flex align-items-center">
         <ul class = "list-group list-group-flush">

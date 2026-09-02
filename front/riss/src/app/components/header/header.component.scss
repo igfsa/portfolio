@@ -34,6 +34,7 @@ a:hover {
 .offcanvas-body {
   background-color: var(--back-menu);
   padding: 0;
+  height: 100%;
 }
 
 .nav-link {
@@ -43,7 +44,6 @@ a:hover {
   span {
     display: inline-block;
     width: inherit;
-    padding: 1rem 3rem;
     text-align: left;
   }
 }
@@ -57,34 +57,12 @@ li {
 .modal-header{
   background-color: var(--back-black);
   border-bottom: 1px solid var(--gray);
-  padding-inline: 5%;
+  padding: 2rem;
 }
 
 .modal-body{
   background-color: #1f1f1f;
-  padding-block: 5%;
-}
-
-#bg-contato{
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  .icon-section:hover,
-  .nav-link:hover{
-    color: var(--home-icon);
-    background-color: transparent !important;
-  }
-
-  a{
-    word-wrap: break-word;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
+  padding: 2rem;
 }
 
 .main-sub{
