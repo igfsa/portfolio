@@ -34,11 +34,9 @@
               }
             ],
             "styles": [
-              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {
@@ -98,11 +96,9 @@
               }
             ],
             "styles": [
-              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/aos/dist/aos.js"
             ]
           }
         }

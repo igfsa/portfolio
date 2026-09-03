@@ -5,7 +5,6 @@ import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 
 import { routes } from './app.routes';
-import AOS from 'aos'
 
 @Component({
     selector: 'app-root',
@@ -36,20 +35,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    // Animate on Scroll init
-    AOS.init();
-    window.addEventListener('load', AOS.refresh);
-
-    // Restarting AOS on each navigation change with a delay
-    // Avoid AOS rendering elements on page leave instead of page enter
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        setTimeout(() => {
-          AOS.refresh()
-      }, 500)
-      }
-    });
-
     this.router.resetConfig(routes);
   }
 }

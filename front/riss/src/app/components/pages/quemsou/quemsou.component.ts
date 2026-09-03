@@ -1,8 +1,8 @@
 import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccordionModule } from 'primeng/accordion';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
-import { ViewportAnimationBarDirective } from '../../../directive/viewportAnimation/viewport-animation-bar.directive';
 import {
   trigger,
   style,
@@ -12,7 +12,7 @@ import {
 
 @Component({
     selector: 'app-quemsou',
-    imports: [CommonModule, AccordionModule, ViewportAnimationBarDirective],
+    imports: [CommonModule, AccordionModule, AnimateOnScrollModule],
     templateUrl: './quemsou.component.html',
     styleUrl: './quemsou.component.scss',
     animations: [

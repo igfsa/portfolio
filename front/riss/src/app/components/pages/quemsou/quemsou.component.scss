@@ -233,6 +233,38 @@
   }
 }
 
+/* ==== Animate on Scroll ==== */
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideout {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+}
+
+.enterSection{
+  animation: slidein 1s ease-in-out forwards;
+}
+
+.leaveSection{
+  animation: slideout 1s ease-in-out forwards;
+}
+
 /* ==== End of animations ==== */
 
 
