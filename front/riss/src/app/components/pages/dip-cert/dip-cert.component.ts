@@ -1,15 +1,14 @@
 import { Component, model } from '@angular/core';
 import { ImageModule } from 'primeng/image';
 import { GalleriaModule } from 'primeng/galleria';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-dip-cert',
     imports: [
-      ImageModule,
-      CommonModule,
-      GalleriaModule
-    ],
+    ImageModule,
+    GalleriaModule
+],
     templateUrl: './dip-cert.component.html',
     styleUrl: './dip-cert.component.scss'
 })
