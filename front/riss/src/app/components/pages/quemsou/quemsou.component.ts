@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccordionModule } from 'primeng/accordion';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
@@ -15,6 +15,7 @@ import {
     imports: [CommonModule, AccordionModule, AnimateOnScrollModule],
     templateUrl: './quemsou.component.html',
     styleUrl: './quemsou.component.scss',
+    changeDetection: ChangeDetectionStrategy.Eager,
     animations: [
         trigger('change_justify', [
             transition('false => true', [

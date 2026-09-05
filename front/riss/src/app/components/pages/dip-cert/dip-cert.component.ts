@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { Component, model, ChangeDetectionStrategy } from '@angular/core';
 import { ImageModule } from 'primeng/image';
 import { GalleriaModule } from 'primeng/galleria';
 
@@ -10,6 +10,7 @@ import { GalleriaModule } from 'primeng/galleria';
     GalleriaModule
 ],
     templateUrl: './dip-cert.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './dip-cert.component.scss'
 })
 export class DipCertComponent {

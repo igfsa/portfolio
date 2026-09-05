@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 import { Drawer, DrawerModule } from 'primeng/drawer';
@@ -16,6 +16,7 @@ import { DialogModule  } from 'primeng/dialog';
       DialogModule
     ],
     templateUrl: './header.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./header.component.scss', '../../app.component.scss']
 })
 

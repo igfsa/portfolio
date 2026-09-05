@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, inject, TemplateRef } from '@angular/core';
+import { AfterViewInit, Component, inject, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +9,7 @@ import { Dialog } from "primeng/dialog";
     selector: 'app-home',
     imports: [RouterLink, RouterLinkActive, Dialog],
     templateUrl: './home.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./home.component.scss', '../../../app.component.scss']
 })
 
