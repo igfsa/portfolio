@@ -512,16 +512,6 @@
 
 /* ==== Egg button ==== */
 
-#saibamais-button div {
-  margin: 0;
-  /* Transição de CSS nativa equivalente ao '500ms' do trigger */
-  transition: margin 500ms ease-in-out;
-}
-
-#saibamais-button div.justified {
-  margin: auto;
-}
-
 .ovo{
   width: 50%;
   margin: auto;
@@ -589,6 +579,10 @@
 }
 
 /* ==== Sections layout ==== */
+
+.section-accordion {
+  background: none !important;
+}
 
 .section {
   display: flex;

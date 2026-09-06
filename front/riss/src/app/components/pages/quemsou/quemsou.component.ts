@@ -1,7 +1,14 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccordionModule } from 'primeng/accordion';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+
+import {
+  trigger,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
     selector: 'app-quemsou',
@@ -9,6 +16,16 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
     templateUrl: './quemsou.component.html',
     styleUrl: './quemsou.component.scss',
     changeDetection: ChangeDetectionStrategy.Eager,
+    animations: [
+        trigger('change_justify', [
+            transition('false => true', [
+                animate('500ms', style({ margin: 'auto' }))
+            ]),
+            transition('true => false', [
+                animate('500ms', style({ margin: '0' }))
+            ])
+        ])
+    ]
 })
 export class QuemsouComponent implements AfterViewInit{
   @ViewChild('light1') box1!: ElementRef;
@@ -16,12 +33,6 @@ export class QuemsouComponent implements AfterViewInit{
   colors: string[] = ['#ff00ff','#ff0000','#00ff00','#0000ff', '#ffff00', '#ffa500', '#ffffff'];
   color1: string = '#ff0000';
   color2: string = '#00ff00';
-
-  isJustified = signal<boolean>(false);
-
-  toggleJustify() {
-    this.isJustified.update(state => !state);
-  }
 
   ngAfterViewInit() {
     this.box1.nativeElement.addEventListener('animationiteration', () => {

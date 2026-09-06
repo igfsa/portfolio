@@ -249,7 +249,7 @@
         <ng-template #toggleicon id="saibamais-button" let-active="active">
 
           @if(!active) {
-            <div [class.justified]="isJustified()" id="ovo-button" class = "d-flex">
+            <div @change_justify id="ovo-button" class = "d-flex">
 
               <svg id="ovo_1" class="ovo" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.14 588.9">
                 <g id="c" data-name="Camada 1">
@@ -264,7 +264,7 @@
               </svg>
             </div>
           } @else {
-            <div [class.justified]="isJustified()" id="ovo-button-op" class = "d-flex">
+            <div @change_justify id="ovo-button-op" class = "d-flex">
 
               <svg id="ovo_1_op" class="ovo" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.14 588.9">
                 <g id="c" data-name="Camada 1">
